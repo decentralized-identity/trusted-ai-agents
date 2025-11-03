@@ -44,6 +44,8 @@ Each transition has a defined trigger and authority (who approves it).
 ```mermaid
 flowchart TD
     A[Proposed] -->|Editorial review confirms completeness and scope alignment| B[Candidate - Under Review]
+    B -->|Changes requested by chairs| B1[Changes Requested]
+    B1 -->|Changes made| B
     B -->|WG Call for Consensus closes with no objections -- 7 days| C[Accepted]
     B -->|Out of scope, duplicate, or insufficient support| D[Rejected]
     C -->|Linked to active WG deliverable| E[Active]
