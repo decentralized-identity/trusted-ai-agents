@@ -1,6 +1,6 @@
 # 📅 2025-12-01 Meeting Notes
 
-## 📋 genda
+## Agenda
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
@@ -9,25 +9,19 @@
 | **20 min** | **Main Topic:** Timeline Alignment | Chairs | Understand how to structure the first work item. Evaluate the UC/ISSUE[#24](https://github.com/decentralized-identity/trusted-ai-agents/issues/24) |
 | **5 min** | Review decisions and action items<br>Planning for next meeting | Chairs | Summarize key decisions, confirm action owners, and discuss agenda for next session. |
 
----
-
-## 👥 Attendees
+## Attendees
 
 `TO BE FILLED AFTER THE MEETING`
 
----
-
-## ✍️ Notes
+## Notes
 
 `TO BE FILLED AFTER THE MEETING`
 
----
-
-## 🚀 Call To Action
+## Call To Action
 
 `TO BE FILLED AFTER THE MEETING`
 
-# 2025-11-24 Meeting Notes
+# 📅 2025-11-24 Meeting Notes
 
 ## Agenda
 
@@ -66,7 +60,7 @@
 `TO BE FILLED AFTER THE MEETING`
 
 
-# 2025-11-17 Meeting Notes
+# 📅 2025-11-17 Meeting Notes
 
 ## Agenda
 
@@ -135,7 +129,7 @@
 
 * Send a message about workstream structure. Decided we will focus on identity to start. Swap out existing time. 
 
-# 2025-11-10 Meeting Notes
+# 📅 2025-11-10 Meeting Notes
 
 ## Agenda
 
@@ -227,7 +221,7 @@ The meeting focused on action items and technology stack requirements. Andor req
 6. Chairs/Andor: Offload the burden of submitting use cases as PRs by helping proposers copy-paste and submit PRs for approved use cases.  
 7. All: Consider and discuss at the next meeting the proposal to start by selecting and building out key components (e.g., agentic discovery/registries) and mapping use cases to those components.
 
-# 2025-11-03 Meeting Notes
+# 📅 2025-11-03 Meeting Notes
 
 ## Agenda
 
@@ -276,7 +270,7 @@ The meeting focused on action items and technology stack requirements. Andor req
 - [ ] Douglas : Draft a Use Case For H&T.
 - [ ] Alan : To submit PR with the Use Case off `main` branch for feedback.
 
-# 2025-10-27 Meeting Notes
+# 📅 2025-10-27 Meeting Notes
 
 ## Agenda
 
@@ -359,7 +353,7 @@ Tagged discuss-next-call for issues that will be brought up next call.
 
 Set a clear course for work in the Working Item. 
 
-# 2025-10-20 Meeting Notes
+# 📅 2025-10-20 Meeting Notes
 
 Note: This is during the week of IIW. We expect less activity than usual tomorrow. 
 
@@ -427,7 +421,7 @@ Note: we might have two audiences.
 
 Set a clear course for work in the Working Item. 
 
-# 2025-10-13 Meeting Notes
+# 📅 2025-10-13 Meeting Notes
 
 ## Agenda
 
