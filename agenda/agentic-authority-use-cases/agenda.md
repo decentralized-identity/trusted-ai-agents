@@ -11,15 +11,33 @@
 
 ## Attendees
 
-`TO BE FILLED AFTER THE MEETING`
+* Andor Kesselman
+* Nicola Gallo 
+* Alan Karp
+* Neil Thomson 
+* Subra
+* Makki Elfaith 
+* Michael Herman
+* Tom Jones
+* Dmitri
+* Jim St.
+* Sachio Iwamoto
+* Douglas Rice
+* Eric Drury
+* Matt Arcblock
 
 ## Notes
 
-`TO BE FILLED AFTER THE MEETING`
+* https://modelcontextprotocol.io/specification/2025-11-25/changelog
+* https://hyperonomy.com/2025/10/14/web-7-0-agentic-os-agent-architecture-reference-model-aarm/#mcp
+* https://blog.modelcontextprotocol.io/posts/2025-11-25-first-mcp-anniversary/  
+* https://mcp.mintlify.app/specification/draft/basic/authorization#standards-compliance
+
 
 ## Call To Action
 
-`TO BE FILLED AFTER THE MEETING`
+- [ ] @andor : issue Decompose and generalize patterns
+- [ ] 
 
 # 📅 2025-11-24 Meeting Notes
 
