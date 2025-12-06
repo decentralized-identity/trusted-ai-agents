@@ -1,4 +1,45 @@
-# 2025-11-24 Meeting Notes
+# 📅 2025-12-01 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| **5 min** | Start recording<br>Welcome & antitrust notice<br>Introduction of new members<br>Agenda review | Chairs | **Antitrust Policy Notice:**<br>Attendees are reminded to adhere to the meeting agenda and not participate in activities prohibited under antitrust and competition laws.<br><br>Only members of the **Decentralized Identity Foundation (DIF)** who have signed the necessary agreements are permitted to participate in this activity beyond an observer role.<br><br>To join DIF and sign the charter, please visit: [https://identity.foundation/join/](https://identity.foundation/join/)<br><br>**Code of Conduct:** [https://github.com/decentralized-identity/org/blob/master/code-of-conduct.md](https://github.com/decentralized-identity/org/blob/master/code-of-conduct.md)<br><br>**Licensing Policy Reminder:**<br>In addition to the licensing terms of this Working Group’s JDF charter, any Working Group Participant who makes a contribution to a Draft Deliverable shall have a maximum of **45 days** from the date of that contribution to exclude any Essential Claims pertaining to that contribution. |
+| **5 min** | Review of previous action items | Chairs | Quick review of open items and updates from prior meetings. |
+| **20 min** | **Main Topic:** Timeline Alignment | Chairs | Understand how to structure the first work item. Evaluate the UC/ISSUE[#24](https://github.com/decentralized-identity/trusted-ai-agents/issues/24) |
+| **5 min** | Review decisions and action items<br>Planning for next meeting | Chairs | Summarize key decisions, confirm action owners, and discuss agenda for next session. |
+
+## Attendees
+
+* Andor Kesselman
+* Nicola Gallo 
+* Alan Karp
+* Neil Thomson 
+* Subra
+* Makki Elfaith 
+* Michael Herman
+* Tom Jones
+* Dmitri
+* Jim St.
+* Sachio Iwamoto
+* Douglas Rice
+* Eric Drury
+* Matt Arcblock
+
+## Notes
+
+* https://modelcontextprotocol.io/specification/2025-11-25/changelog
+* https://hyperonomy.com/2025/10/14/web-7-0-agentic-os-agent-architecture-reference-model-aarm/#mcp
+* https://blog.modelcontextprotocol.io/posts/2025-11-25-first-mcp-anniversary/  
+* https://mcp.mintlify.app/specification/draft/basic/authorization#standards-compliance
+
+
+## Call To Action
+
+- [ ] @andor : issue Decompose and generalize patterns
+- [ ] 
+
+# 📅 2025-11-24 Meeting Notes
 
 ## Agenda
 
@@ -37,7 +78,7 @@
 `TO BE FILLED AFTER THE MEETING`
 
 
-# 2025-11-17 Meeting Notes
+# 📅 2025-11-17 Meeting Notes
 
 ## Agenda
 
@@ -106,7 +147,7 @@
 
 * Send a message about workstream structure. Decided we will focus on identity to start. Swap out existing time. 
 
-# 2025-11-10 Meeting Notes
+# 📅 2025-11-10 Meeting Notes
 
 ## Agenda
 
@@ -198,7 +239,7 @@ The meeting focused on action items and technology stack requirements. Andor req
 6. Chairs/Andor: Offload the burden of submitting use cases as PRs by helping proposers copy-paste and submit PRs for approved use cases.  
 7. All: Consider and discuss at the next meeting the proposal to start by selecting and building out key components (e.g., agentic discovery/registries) and mapping use cases to those components.
 
-# 2025-11-03 Meeting Notes
+# 📅 2025-11-03 Meeting Notes
 
 ## Agenda
 
@@ -247,7 +288,7 @@ The meeting focused on action items and technology stack requirements. Andor req
 - [ ] Douglas : Draft a Use Case For H&T.
 - [ ] Alan : To submit PR with the Use Case off `main` branch for feedback.
 
-# 2025-10-27 Meeting Notes
+# 📅 2025-10-27 Meeting Notes
 
 ## Agenda
 
@@ -330,7 +371,7 @@ Tagged discuss-next-call for issues that will be brought up next call.
 
 Set a clear course for work in the Working Item. 
 
-# 2025-10-20 Meeting Notes
+# 📅 2025-10-20 Meeting Notes
 
 Note: This is during the week of IIW. We expect less activity than usual tomorrow. 
 
@@ -398,7 +439,7 @@ Note: we might have two audiences.
 
 Set a clear course for work in the Working Item. 
 
-# 2025-10-13 Meeting Notes
+# 📅 2025-10-13 Meeting Notes
 
 ## Agenda
 
