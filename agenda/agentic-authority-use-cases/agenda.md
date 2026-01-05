@@ -13,24 +13,27 @@
 
 ## Notes
 
-- Delegation requirements (Alan)
+- Delegation requirements helpful to document and formalize (Alan)
 - Capability authz task force (Dmitri)
-- Architecture and Distributed Transactions has to be addressed by a future work stream to extract common patterns and create a reference architecture (Juan)
+- Architecture and Distributed Transactions has to be addressed by a future work stream to extract common patterns and create a reference architecture; much easier once other work streams have already written reports and prototyped (Juan)
+- Tom: Should we just use slack to gather opinions and entice people to contribute to work streams? BF: absolutely! 
 
 ### Delegation Authz Work Stream (Use Cases)
 
 - First volunteers: Dmitri, Tom, Dylan, Debb, Alan, Alex
-- First deliverable: report
-- Topics: Revocation
+- First deliverable: Pick usecases to target and write report on patterns, requirements and gaps
+    + Topics: Revocation in particular
 
-### Governance and Policies Work Stream
+### Governance and/of Policy Work Stream
 
-- To be defined
+- Tom: we already have policy syntaxes (Cedar, etc), but are they good enough? How can the syntaxes be anchored in semantics good enough for real-world safety and contracts?
+- Alan: Hard to talk about policy semantics without clear governance of those semantics, non? Tom: Yes, but you can isolate the policy relative to specific use cases and leave clearer connections to governance questions 
 
-## Call To Action
+## Action Items
 
-- Set up the Slack channels
-- Training as suggested by Grace
+- [ ] Bumblefudge - Set up the Slack channel(s)
+- [ ] BF - get Alex B into Slack
+- [ ] Chairs to meet w/Grace/DIF staff re: archiving significant contributions from outside recorded/minuted meetings
 
 # 📅 2025-12-07 Meeting Notes
 
