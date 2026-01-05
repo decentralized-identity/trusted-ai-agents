@@ -13,7 +13,24 @@
 
 ## Notes
 
+- Delegation requirements (Alan)
+- Capability authz task force (Dmitri)
+- Architecture and Distributed Transactions has to be addressed by a future work stream to extract common patterns and create a reference architecture (Juan)
+
+### Delegation Authz Work Stream (Use Cases)
+
+- First volunteers: Dmitri, Tom, Dylan, Debb, Alan, Alex
+- First deliverable: report
+- Topics: Revocation
+
+### Governance and Policies Work Stream
+
+- To be defined
+
 ## Call To Action
+
+- Set up the Slack channels
+- Training as suggested by Grace
 
 # 📅 2025-12-07 Meeting Notes
 
