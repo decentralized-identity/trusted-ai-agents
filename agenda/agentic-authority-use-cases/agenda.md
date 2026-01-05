@@ -1,3 +1,26 @@
+# 📅 2025-12-07 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| **5 min** | Start recording<br>Welcome & antitrust notice<br>Introduction of new members<br>Agenda review | Chairs | **Antitrust Policy Notice:**<br>Attendees are reminded to adhere to the meeting agenda and not participate in activities prohibited under antitrust and competition laws.<br><br>Only members of the **Decentralized Identity Foundation (DIF)** who have signed the necessary agreements are permitted to participate in this activity beyond an observer role.<br><br>To join DIF and sign the charter, please visit: [https://identity.foundation/join/](https://identity.foundation/join/)<br><br>**Code of Conduct:** [https://github.com/decentralized-identity/org/blob/master/code-of-conduct.md](https://github.com/decentralized-identity/org/blob/master/code-of-conduct.md)<br><br>**Licensing Policy Reminder:**<br>In addition to the licensing terms of this Working Group’s JDF charter, any Working Group Participant who makes a contribution to a Draft Deliverable shall have a maximum of **45 days** from the date of that contribution to exclude any Essential Claims pertaining to that contribution. |
+| **5 min** | Review of previous action items | Chairs | Quick review of open items and updates from prior meetings. |
+| **20 min** | **Main Topic:** Identity Working Group Output | @andor | Discuss agentic identifiers and agentic identity. Prepare a set of valid indentifier for identity requirements per the use case. | 
+| **5 min** | Review decisions and action items<br>Planning for next meeting | Chairs | Summarize key decisions, confirm action owners, and discuss agenda for next session. |
+
+
+| | Pattern |
+| -----|--- |
+| Use Case | |
+
+## Attendees
+
+## Notes
+
+## Call To Action
+
+
 # 📅 2025-12-01 Meeting Notes
 
 ## Agenda
@@ -37,7 +60,7 @@
 ## Call To Action
 
 - [ ] @andor : issue Decompose and generalize patterns
-- [ ] 
+
 
 # 📅 2025-11-24 Meeting Notes
 
