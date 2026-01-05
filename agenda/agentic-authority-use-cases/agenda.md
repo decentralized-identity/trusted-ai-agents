@@ -31,8 +31,8 @@
 
 ## Action Items
 
-- [ ] Bumblefudge - Set up the Slack channel(s)
-- [ ] BF - get Alex B into Slack
+- [X] Bumblefudge - Set up the Slack channel(s)
+- [X] BF - get Alex B into Slack
 - [ ] Chairs to meet w/Grace/DIF staff re: archiving significant contributions from outside recorded/minuted meetings
 
 # 📅 2025-12-07 Meeting Notes
