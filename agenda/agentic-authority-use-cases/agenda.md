@@ -10,9 +10,60 @@
 
 ## Attendees
 
+- Dmitri Zagidulin
+- Alan Karp
+- Alex Bainbridge
+- Alex
+- Dylan Hobbs
+- Juan C.
+- Jim St. Clair
+- Debb
+- Sachio Iwamoto 
+- Victor Lu
+- Mitchell Travers
+  
 ## Notes
 
+- https://github.com/decentralized-identity/taa-delegatable-authorization-tf
+- [Review the ](https://difdn.slack.com/archives/C0A70MT32QL/p1767970277273299 Debbi's strawman TOC)
+- 3 leads propose 3 times that work.
+- Use this meeting for progress reports.
+- MCP-I progression.
+- Previous TOC:
+    1. Problem Statement: Delegation vs. Agency
+    • What breaks when authority must cross heterogeneous systems
+    • Why “agent intelligence” is not the core problem
+    2. Authority Continuity and Intent
+    • Delegation as a continuation property, not a transferable object
+    • Mutable intent and bounded authority
+    3. Execution Boundaries and Verification
+    • Where verification must occur when no single system is authoritative
+    • Resource PDPs vs. gateways vs. runtime enforcement
+    4. Delegation Chains and Chaining Hazards
+    • Confused deputy, covert channels, and authority creep
+    • Why blocking delegation fails in practice
+    5. Policy as Constraint, Not Prompt
+    • Deterministic policy enforcement vs. nondeterministic interpretation
+    • Separation of prompts, policies, and execution
+    6. Auditability and Provenance
+    • What must be observable at runtime
+    • What existing systems fail to record
+    7. Capability-Based vs. Token-Based vs. Continuity-Based Models
+    • Where each model holds
+    • Where they break in distributed agent systems
+    8. Implications for Agent Interoperability
+    • Cross-domain delegation
+    • Federated and decentralized environments
+    9. Open Questions and Research Gaps
+    • What is not yet well understood
+    • Areas for prototyping and comparison
+
 ## Action Items
+
+- [ ] Debb to push to markdown for Google docs.
+- [ ] Dimitri schedule doodle for folks to work on the work stream directly
+- [ ] Conveners : Propose time slots in slack channel.
+- [ ] This meeting to move to 30 min as a status update.
 
 ## Agenda
 
