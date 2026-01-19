@@ -1,3 +1,105 @@
+# 📅 2026-01-012 Meeting Notes
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| **5 min** | Start recording<br>Welcome & antitrust notice<br>Introduction of new members<br>Agenda review | Chairs | **Antitrust Policy Notice:**<br>Attendees are reminded to adhere to the meeting agenda and not participate in activities prohibited under antitrust and competition laws.<br><br>Only members of the **Decentralized Identity Foundation (DIF)** who have signed the necessary agreements are permitted to participate in this activity beyond an observer role.<br><br>To join DIF and sign the charter, please visit: [https://identity.foundation/join/](https://identity.foundation/join/)<br><br>**Code of Conduct:** [https://github.com/decentralized-identity/org/blob/master/code-of-conduct.md](https://github.com/decentralized-identity/org/blob/master/code-of-conduct.md)<br><br>**Licensing Policy Reminder:**<br>In addition to the licensing terms of this Working Group's JDF charter, any Working Group Participant who makes a contribution to a Draft Deliverable shall have a maximum of **45 days** from the date of that contribution to exclude any Essential Claims pertaining to that contribution. |
+| **5 min** | Review of previous action items | Chairs | Quick review of open items and updates from prior meetings. |
+| **20 min** | **Main Topic:** Review current status and define next steps | Chairs | Take stock of where we are with agentic identifiers and agentic identity work. Decide on the next steps forward. |
+| **5 min** | Review decisions and action items<br>Planning for next meeting | Chairs | Summarize key decisions, confirm action owners, and discuss agenda for next session. |
+
+## Attendees
+
+- Dmitri Zagidulin
+- Alan Karp
+- Alex Bainbridge
+- Alex
+- Dylan Hobbs
+- Juan C.
+- Jim St. Clair
+- Debb
+- Sachio Iwamoto 
+- Victor Lu
+- Mitchell Travers
+  
+## Notes
+
+- https://github.com/decentralized-identity/taa-delegatable-authorization-tf
+- [Review the ](https://difdn.slack.com/archives/C0A70MT32QL/p1767970277273299 Debbi's strawman TOC)
+- 3 leads propose 3 times that work.
+- Use this meeting for progress reports.
+- MCP-I progression.
+- Previous TOC:
+    1. Problem Statement: Delegation vs. Agency
+    • What breaks when authority must cross heterogeneous systems
+    • Why “agent intelligence” is not the core problem
+    2. Authority Continuity and Intent
+    • Delegation as a continuation property, not a transferable object
+    • Mutable intent and bounded authority
+    3. Execution Boundaries and Verification
+    • Where verification must occur when no single system is authoritative
+    • Resource PDPs vs. gateways vs. runtime enforcement
+    4. Delegation Chains and Chaining Hazards
+    • Confused deputy, covert channels, and authority creep
+    • Why blocking delegation fails in practice
+    5. Policy as Constraint, Not Prompt
+    • Deterministic policy enforcement vs. nondeterministic interpretation
+    • Separation of prompts, policies, and execution
+    6. Auditability and Provenance
+    • What must be observable at runtime
+    • What existing systems fail to record
+    7. Capability-Based vs. Token-Based vs. Continuity-Based Models
+    • Where each model holds
+    • Where they break in distributed agent systems
+    8. Implications for Agent Interoperability
+    • Cross-domain delegation
+    • Federated and decentralized environments
+    9. Open Questions and Research Gaps
+    • What is not yet well understood
+    • Areas for prototyping and comparison
+
+## Action Items
+
+- [ ] Debb to push to markdown for Google docs.
+- [ ] Dimitri schedule doodle for folks to work on the work stream directly
+- [ ] Conveners : Propose time slots in slack channel.
+- [ ] This meeting to move to 30 min as a status update.
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| **5 min** | Start recording<br>Welcome & antitrust notice<br>Introduction of new members<br>Agenda review | Chairs | **Antitrust Policy Notice:**<br>Attendees are reminded to adhere to the meeting agenda and not participate in activities prohibited under antitrust and competition laws.<br><br>Only members of the **Decentralized Identity Foundation (DIF)** who have signed the necessary agreements are permitted to participate in this activity beyond an observer role.<br><br>To join DIF and sign the charter, please visit: [https://identity.foundation/join/](https://identity.foundation/join/)<br><br>**Code of Conduct:** [https://github.com/decentralized-identity/org/blob/master/code-of-conduct.md](https://github.com/decentralized-identity/org/blob/master/code-of-conduct.md)<br><br>**Licensing Policy Reminder:**<br>In addition to the licensing terms of this Working Group's JDF charter, any Working Group Participant who makes a contribution to a Draft Deliverable shall have a maximum of **45 days** from the date of that contribution to exclude any Essential Claims pertaining to that contribution. |
+| **5 min** | Review of previous action items | Chairs | Quick review of open items and updates from prior meetings. |
+| **20 min** | **Main Topic:** Review current status and define next steps | Chairs | Take stock of where we are with agentic identifiers and agentic identity work. Decide on the next steps forward. |
+| **5 min** | Review decisions and action items<br>Planning for next meeting | Chairs | Summarize key decisions, confirm action owners, and discuss agenda for next session. |
+
+## Attendees
+
+## Notes
+
+- Delegation requirements helpful to document and formalize (Alan)
+- Capability authz task force (Dmitri)
+- Architecture and Distributed Transactions has to be addressed by a future work stream to extract common patterns and create a reference architecture; much easier once other work streams have already written reports and prototyped (Juan)
+- Tom: Should we just use slack to gather opinions and entice people to contribute to work streams? BF: absolutely! 
+
+### Delegation Authz Work Stream (Use Cases)
+
+- First volunteers: Dmitri, Tom, Dylan, Debb, Alan, Alex
+- First deliverable: Pick usecases to target and write report on patterns, requirements and gaps
+    + Topics: Revocation in particular
+
+### Governance and/of Policy Work Stream
+
+- Tom: we already have policy syntaxes (Cedar, etc), but are they good enough? How can the syntaxes be anchored in semantics good enough for real-world safety and contracts?
+- Alan: Hard to talk about policy semantics without clear governance of those semantics, non? Tom: Yes, but you can isolate the policy relative to specific use cases and leave clearer connections to governance questions 
+
+## Action Items
+
+- [X] Bumblefudge - Set up the Slack channel(s)
+- [X] BF - get Alex B into Slack
+- [ ] Chairs to meet w/Grace/DIF staff re: archiving significant contributions from outside recorded/minuted meetings
+
 # 📅 2025-12-07 Meeting Notes
 
 ## Agenda
