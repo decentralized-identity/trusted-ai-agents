@@ -1,4 +1,5 @@
 # 📅 2026-01-19 Meeting Notes
+
 ## Agenda
 
 | Time | Agenda Item | Lead | Notes |
@@ -10,22 +11,21 @@
 
 ## Attendees
 
-- xxx
-  
+- Nicola Gallo
+- Bumblefudge
+- Alan Karp
+- Debb
+- Douglas Rice
+- Geun Hyung Kim
+- Sachio Iwamoto
+
 ## Notes
 
 - xxx
 
-## Previus Meet Action Items
-
-- [ ] Debb to push to markdown for Google docs.
-- [ ] Dimitri schedule doodle for folks to work on the work stream directly
-- [ ] Conveners : Propose time slots in slack channel.
-- [ ] This meeting to move to 30 min as a status update.
-
 ## Action Items
 
-- xx
+- [ ] Dimitri schedule doodle for folks to work on the work stream directly
 
 # 📅 2026-01-12 Meeting Notes
 ## Agenda
