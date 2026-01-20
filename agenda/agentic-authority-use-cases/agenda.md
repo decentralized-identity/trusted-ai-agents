@@ -21,11 +21,16 @@
 
 ## Notes
 
-- xxx
+- Google doc already up and being collaborated on
+- Delegation report meetings waiting on Dmitri but work in the gdoc in the meantime 
+- One or more prototyping work streams to start soon (BF will provision)
 
 ## Action Items
 
-- [ ] Dimitri schedule doodle for folks to work on the work stream directly
+- [ ] Dmitri send doodle for folks to work on the delegation work stream
+- [ ] Delegation Report: Everyone Work in the google doc for now
+- [ ] Use Cases - review pull #30 and iterate/update any other use-cases to bring them up to speed/shape
+- [ ] BF to get a VPS for the prototyping efforts
 
 # 📅 2026-01-12 Meeting Notes
 ## Agenda
