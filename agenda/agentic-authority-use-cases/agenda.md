@@ -1,3 +1,37 @@
+# 📅 2026-02-09 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Logistics and task force updates | Dmitri ||
+| 5min | Show-and-tell: DIF has a (tiny) MCP-i server :salute: | Juan, Alex ||
+| 5min | Tom's use case and corresponding threat modeling [document](https://docs.google.com/document/d/1I8hJH8QdVps4ISqnfVlLsBecQ28KfXonIApx4Avot_M/edit?usp=sharing)| Tom, BF ||
+| 10min | Governance and policy task force? | Alan? ||
+
+## Minutes
+
+# 📅 2026-02-02 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Logistics | Dmitri ||
+| 10min | Kickoff for Delegation Report, logistics | Dmitri | |
+| 5min | Report-outs from other task forces | Juan, Alex | will install on server; MCP-i donation ongoing |
+| 10min | Any more task forces? | Dmitri | Policy engines & governance of interest to lots of folks |
+
+## Minutes
+
+- alan: i think we have at least two usecases already that really require some governance thinking: shopping for a tween and enterprise purchasing
+  - sachio: how a registry tracks and allocates and gates skills and authZ for a given agent in a given use-case, that's an interesting and novel form of governance to explore new policy mechanisms for
+  + deb: my experience with healthcare data, NIST, etc makes me think human governance and tech policy can never interface simply, you need a lot of complexity and dynamic interfaces ; having built out a gateway and PDT/PDP, policy and governance are a huge part of the requirements, it's very complex; how do you automate policy in a dynamic way?
+- Action Items
+  + [ ] alex and juan will meet about prototyping and donation/spec work item
+  + [ ] read report before Thursday's meeting, those thinking about delegation!
+  + [ ] share links and thoughts on governance in slack channel, discuss more next week?
+
 # 📅 2026-01-26 Meeting Notes
 
 ## Agenda
