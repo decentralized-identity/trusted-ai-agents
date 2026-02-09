@@ -1,3 +1,63 @@
+# 📅 2026-02-02 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Logistics | Dmitri ||
+| 10min | Kickoff for Delegation Report, logistics | Dmitri | |
+| 5min | Report-outs from other task forces | Juan, Alex | will install on server; MCP-i donation ongoing |
+| 10min | Any more task forces? | Dmitri | Policy engines & governance of interest to lots of folks |
+
+## Minutes
+
+- alan: i think we have at least two usecases already that really require some governance thinking: shopping for a tween and enterprise purchasing
+  - sachio: how a registry tracks and allocates and gates skills and authZ for a given agent in a given use-case, that's an interesting and novel form of governance to explore new policy mechanisms for
+  + deb: my experience with healthcare data, NIST, etc makes me think human governance and tech policy can never interface simply, you need a lot of complexity and dynamic interfaces ; having built out a gateway and PDT/PDP, policy and governance are a huge part of the requirements, it's very complex; how do you automate policy in a dynamic way?
+- Action Items
+  + [ ] alex and juan will meet about prototyping and donation/spec work item
+  + [ ] read report before Thursday's meeting, those thinking about delegation!
+  + [ ] share links and thoughts on governance in slack channel, discuss more next week?
+
+# 📅 2026-01-26 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | [PR #30](https://github.com/decentralized-identity/trusted-ai-agents/pull/30/changes) | Dmitri | |
+| 5min | Doodle poll for delegated Authority: https://doodle.com/group-poll/participate/aOXyzXQb/vote | Dmitri | |
+| 10min | Progress reports on work items: 1. Delegated Authority Report 2. Prototyping on AWS: MCP-i | Alan, Juan ||
+| 5min | Tom's threat modeling [document](https://docs.google.com/document/d/1I8hJH8QdVps4ISqnfVlLsBecQ28KfXonIApx4Avot_M/edit?usp=sharing)| Tom ||
+
+## Minutes
+
+- PR #30
+  - Dima: Let's get some +1s and merge it
+  - BF:
+- Doodle poll for delegated Authority: https://doodle.com/group-poll/participate/aOXyzXQb/vote
+- Progress reports on work items:
+  - Delegated Authority Report
+    - Dima: Just getting calls together; first meeting next week
+    - Alan: i've filled in 80% of Deb's outline, first draft done by end of week; treat it like a rough draft and edit away, everyone!
+      - bf: can people read it before the first meeting? dima/alan: please do!
+      - alan: kudos to deb for shaping it! dima: and kudos to alan for powering through it before the first meeting
+  - Prototyping on AWS: MCP-i?
+    - bf: VPS is up, people can reach out if they want to prototype with MCP-i or with anything else
+    - Alan: I read the MCP-i doc, I don't find the confused deputy section very convincing; i'm discussing with them on their discord
+- Potential future work items
+  - Tom's threat modeling [document](https://docs.google.com/document/d/1I8hJH8QdVps4ISqnfVlLsBecQ28KfXonIApx4Avot_M/edit?usp=sharing)?
+    - Tom's explanation:
+      - 1. (formally) this is a good threat modeling exercise
+      - 2. (contentwise) i believe we should start thinking against MCP/server-centric models, the more i wrote this the more i was convinced this usecase is better for A2A
+      - instructions for review: read first 2 pages closely, the rest isn't even fully fleshed out;
+    - tom will send a use case to bf to PR it into the use-cases folder
+- Action Items
+  - [ ] EVERYONE - Review Tom's Threat Model for a Personal Agent usecase before next meeting - any feedback welcome
+  - [ ] DELEGATION TEAM - Respond to Dmitri's Doodle on the mailing list and in Slack
+  - [ ] DELEGATION TEAM - Review of Alan's rough draft before first meeting
+  - [ ] PROTOTYPERS - reach out to BF on DIF Slack if you need access to the MCP-i VPS or if you have another usecase/toolchain you want to prototype
+
 # 📅 2026-01-19 Meeting Notes
 
 ## Agenda
