@@ -1,3 +1,18 @@
+# 📅 2026-02-23 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Logistics and task force updates | Dmitri ||
+| 10min | MCP-i for dummies? | Alex ||
+| 5min | Governance and policy task force? | Alan? ||
+| 5min | Show-and-tell: DIF has a (tiny) MCP-i server :salute: | Juan, Alex ||
+
+# 📅 2026-02-16 Meeting Notes
+
+Canceled for US holidays
+
 # 📅 2026-02-09 Meeting Notes
 
 ## Agenda
@@ -6,8 +21,28 @@
 | :---: | :--- | :--- | :--- |
 | 10min | Logistics and task force updates | Dmitri ||
 | 5min | Show-and-tell: DIF has a (tiny) MCP-i server :salute: | Juan, Alex ||
-| 5min | Tom's use case and corresponding threat modeling [document](https://docs.google.com/document/d/1I8hJH8QdVps4ISqnfVlLsBecQ28KfXonIApx4Avot_M/edit?usp=sharing)| Tom, BF ||
-| 10min | Governance and policy task force? | Alan? ||
+| 5min | Tom's [use case](https://github.com/decentralized-identity/trusted-ai-agents/pull/32) and corresponding threat modeling [document](https://docs.google.com/document/d/1I8hJH8QdVps4ISqnfVlLsBecQ28KfXonIApx4Avot_M/edit?usp=sharing)| Tom, BF ||
+
+## Minutes
+
+- Intros and re-intros
+  - Christian Saucier - Coming over from DID Methods WG (where I represented the [MDIP did method](https://docs.selfid.com/mdip)) - led here by my agents; clawbot proves DIDs are urgently needed
+- Other groups
+  - Delegated Authorization updates: google doc needs another pass, next week check it in and start workingon bigger PRs?
+    - requirements for any new specs?
+    - Dima: gap analysis and review of existing AuthZ specs/languages? Alan: Maybe that's next pass/step for the report, not much in there prior art wise
+      - Dima: I have some notes from a prior project (doesn't cover policy languages, just token formats and authZ protocols)
+    - Alan: Where does Nico's ZTA fit in? We're still debating in sidechannel about reconciling the PIC approach (policy enforcement across a distributed txn) and the Capability approach
+      - Dima: Is this just caveats? Alan: Yes, but Nico is talking about originator imposing conditions across the whole chain- originator expressing something that follows whole chain
+  - Governance and Policy TF? Whom lead? Call for lead? Alan: Upstream of policy languages or tokens/AuthZ context per se; Sachio: I'm interested, but uncomfortable leading
+  - Prototyping TF
+    - BF: not much progress, but hopefully soon we spin up meetings specifically for MCP-i; discussions in the MCP-i discord for now (not IP-protected yet)
+  - MCP-i TF
+    - Alex: meetings to iterate draft spec and collab on extensions (e.g. additional DID methods)
+    - Dima: 10min presi to get the WG up to speed? Two weeks from today?
+- Action Items
+  - [ ] Everyone - try to close marginalia and comments to check into github end of week?
+  - [ ] BF will make progress on the WG's toy MCP/MCP-i server
 
 # 📅 2026-02-02 Meeting Notes
 
