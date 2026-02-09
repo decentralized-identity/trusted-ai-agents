@@ -1,3 +1,14 @@
+# 📅 2026-02-09 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Logistics and task force updates | Dmitri ||
+| 5min | Show-and-tell: DIF has a (tiny) MCP-i server :salute: | Juan, Alex ||
+| 5min | Tom's use case and corresponding threat modeling [document](https://docs.google.com/document/d/1I8hJH8QdVps4ISqnfVlLsBecQ28KfXonIApx4Avot_M/edit?usp=sharing)| Tom, BF ||
+| 10min | Governance and policy task force? | Alan? ||
+
 # 📅 2026-02-02 Meeting Notes
 
 ## Agenda
