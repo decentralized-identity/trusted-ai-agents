@@ -1,3 +1,13 @@
+# 📅 2026-02-30 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Logistics and task force updates | Dmitri ||
+| 5min | Governance and policy task force? | Alan? ||
+| 5min | Show-and-tell: DIF has a (tiny) MCP-i server :salute: | Juan, Alex ||
+
 # 📅 2026-02-23 Meeting Notes
 
 ## Agenda
@@ -7,7 +17,19 @@
 | 10min | Logistics and task force updates | Dmitri ||
 | 10min | MCP-i for dummies? | Alex ||
 | 5min | Governance and policy task force? | Alan? ||
-| 5min | Show-and-tell: DIF has a (tiny) MCP-i server :salute: | Juan, Alex ||
+
+## Minutes
+
+- Dima: Updates from Delegated Authority TF-group invited to think about use-case applicability informally or collectively, we'll start doing that on Thursday
+  - Alan: Finalizing draft tomorrow
+- Alex K: MCP-i presi (slides)
+  - Ideally evolves into a general Protocol layer, not just a single platform or product
+  - extensibility; subgroup here could make extensions that will get used
+  - Nicola's focus on confused deputy has already been helpful iterating on this already
+  - looking forward to seeing how diff subgroups and usecase modeling can be applied
+- Other topics: how to get policy and governance off the ground? any champions?
+  - Debbie: I am more interested in evaluating protocols for the time being but I could try proposing an initial outline for an overview report like I did last time? 
+    - the crowd goes wild
 
 # 📅 2026-02-16 Meeting Notes
 
