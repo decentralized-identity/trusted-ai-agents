@@ -1,4 +1,4 @@
-# 📅 2026-02-30 Meeting Notes
+# 📅 2026-03-02 Meeting Notes
 
 ## Agenda
 
@@ -6,7 +6,6 @@
 | :---: | :--- | :--- | :--- |
 | 10min | Logistics and task force updates | Dmitri ||
 | 5min | Governance and policy task force? | Alan? ||
-| 5min | Show-and-tell: DIF has a (tiny) MCP-i server :salute: | Juan, Alex ||
 
 # 📅 2026-02-23 Meeting Notes
 
