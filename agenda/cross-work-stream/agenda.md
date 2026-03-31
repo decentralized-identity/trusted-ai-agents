@@ -1,3 +1,130 @@
+# 📅 2026-03-02 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Logistics and task force updates | Dmitri ||
+| 5min | Governance and policy task force? | Alan? ||
+
+# 📅 2026-02-23 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Logistics and task force updates | Dmitri ||
+| 10min | MCP-i for dummies? | Alex ||
+| 5min | Governance and policy task force? | Alan? ||
+
+## Minutes
+
+- Dima: Updates from Delegated Authority TF-group invited to think about use-case applicability informally or collectively, we'll start doing that on Thursday
+  - Alan: Finalizing draft tomorrow
+- Alex K: MCP-i presi (slides)
+  - Ideally evolves into a general Protocol layer, not just a single platform or product
+  - extensibility; subgroup here could make extensions that will get used
+  - Nicola's focus on confused deputy has already been helpful iterating on this already
+  - looking forward to seeing how diff subgroups and usecase modeling can be applied
+- Other topics: how to get policy and governance off the ground? any champions?
+  - Debbie: I am more interested in evaluating protocols for the time being but I could try proposing an initial outline for an overview report like I did last time? 
+    - the crowd goes wild
+
+# 📅 2026-02-16 Meeting Notes
+
+Canceled for US holidays
+
+# 📅 2026-02-09 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Logistics and task force updates | Dmitri ||
+| 5min | Show-and-tell: DIF has a (tiny) MCP-i server :salute: | Juan, Alex ||
+| 5min | Tom's [use case](https://github.com/decentralized-identity/trusted-ai-agents/pull/32) and corresponding threat modeling [document](https://docs.google.com/document/d/1I8hJH8QdVps4ISqnfVlLsBecQ28KfXonIApx4Avot_M/edit?usp=sharing)| Tom, BF ||
+
+## Minutes
+
+- Intros and re-intros
+  - Christian Saucier - Coming over from DID Methods WG (where I represented the [MDIP did method](https://docs.selfid.com/mdip)) - led here by my agents; clawbot proves DIDs are urgently needed
+- Other groups
+  - Delegated Authorization updates: google doc needs another pass, next week check it in and start workingon bigger PRs?
+    - requirements for any new specs?
+    - Dima: gap analysis and review of existing AuthZ specs/languages? Alan: Maybe that's next pass/step for the report, not much in there prior art wise
+      - Dima: I have some notes from a prior project (doesn't cover policy languages, just token formats and authZ protocols)
+    - Alan: Where does Nico's ZTA fit in? We're still debating in sidechannel about reconciling the PIC approach (policy enforcement across a distributed txn) and the Capability approach
+      - Dima: Is this just caveats? Alan: Yes, but Nico is talking about originator imposing conditions across the whole chain- originator expressing something that follows whole chain
+  - Governance and Policy TF? Whom lead? Call for lead? Alan: Upstream of policy languages or tokens/AuthZ context per se; Sachio: I'm interested, but uncomfortable leading
+  - Prototyping TF
+    - BF: not much progress, but hopefully soon we spin up meetings specifically for MCP-i; discussions in the MCP-i discord for now (not IP-protected yet)
+  - MCP-i TF
+    - Alex: meetings to iterate draft spec and collab on extensions (e.g. additional DID methods)
+    - Dima: 10min presi to get the WG up to speed? Two weeks from today?
+- Action Items
+  - [ ] Everyone - try to close marginalia and comments to check into github end of week?
+  - [ ] BF will make progress on the WG's toy MCP/MCP-i server
+
+# 📅 2026-02-02 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Logistics | Dmitri ||
+| 10min | Kickoff for Delegation Report, logistics | Dmitri | |
+| 5min | Report-outs from other task forces | Juan, Alex | will install on server; MCP-i donation ongoing |
+| 10min | Any more task forces? | Dmitri | Policy engines & governance of interest to lots of folks |
+
+## Minutes
+
+- alan: i think we have at least two usecases already that really require some governance thinking: shopping for a tween and enterprise purchasing
+  - sachio: how a registry tracks and allocates and gates skills and authZ for a given agent in a given use-case, that's an interesting and novel form of governance to explore new policy mechanisms for
+  + deb: my experience with healthcare data, NIST, etc makes me think human governance and tech policy can never interface simply, you need a lot of complexity and dynamic interfaces ; having built out a gateway and PDT/PDP, policy and governance are a huge part of the requirements, it's very complex; how do you automate policy in a dynamic way?
+- Action Items
+  + [ ] alex and juan will meet about prototyping and donation/spec work item
+  + [ ] read report before Thursday's meeting, those thinking about delegation!
+  + [ ] share links and thoughts on governance in slack channel, discuss more next week?
+
+# 📅 2026-01-26 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | [PR #30](https://github.com/decentralized-identity/trusted-ai-agents/pull/30/changes) | Dmitri | |
+| 5min | Doodle poll for delegated Authority: https://doodle.com/group-poll/participate/aOXyzXQb/vote | Dmitri | |
+| 10min | Progress reports on work items: 1. Delegated Authority Report 2. Prototyping on AWS: MCP-i | Alan, Juan ||
+| 5min | Tom's threat modeling [document](https://docs.google.com/document/d/1I8hJH8QdVps4ISqnfVlLsBecQ28KfXonIApx4Avot_M/edit?usp=sharing)| Tom ||
+
+## Minutes
+
+- PR #30
+  - Dima: Let's get some +1s and merge it
+  - BF:
+- Doodle poll for delegated Authority: https://doodle.com/group-poll/participate/aOXyzXQb/vote
+- Progress reports on work items:
+  - Delegated Authority Report
+    - Dima: Just getting calls together; first meeting next week
+    - Alan: i've filled in 80% of Deb's outline, first draft done by end of week; treat it like a rough draft and edit away, everyone!
+      - bf: can people read it before the first meeting? dima/alan: please do!
+      - alan: kudos to deb for shaping it! dima: and kudos to alan for powering through it before the first meeting
+  - Prototyping on AWS: MCP-i?
+    - bf: VPS is up, people can reach out if they want to prototype with MCP-i or with anything else
+    - Alan: I read the MCP-i doc, I don't find the confused deputy section very convincing; i'm discussing with them on their discord
+- Potential future work items
+  - Tom's threat modeling [document](https://docs.google.com/document/d/1I8hJH8QdVps4ISqnfVlLsBecQ28KfXonIApx4Avot_M/edit?usp=sharing)?
+    - Tom's explanation:
+      - 1. (formally) this is a good threat modeling exercise
+      - 2. (contentwise) i believe we should start thinking against MCP/server-centric models, the more i wrote this the more i was convinced this usecase is better for A2A
+      - instructions for review: read first 2 pages closely, the rest isn't even fully fleshed out;
+    - tom will send a use case to bf to PR it into the use-cases folder
+- Action Items
+  - [ ] EVERYONE - Review Tom's Threat Model for a Personal Agent usecase before next meeting - any feedback welcome
+  - [ ] DELEGATION TEAM - Respond to Dmitri's Doodle on the mailing list and in Slack
+  - [ ] DELEGATION TEAM - Review of Alan's rough draft before first meeting
+  - [ ] PROTOTYPERS - reach out to BF on DIF Slack if you need access to the MCP-i VPS or if you have another usecase/toolchain you want to prototype
+
 # 📅 2026-01-19 Meeting Notes
 
 ## Agenda
