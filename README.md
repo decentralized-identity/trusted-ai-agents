@@ -18,7 +18,8 @@ Once a quarter, the task force meets to discuss and share updates.
 
 | Name        | Start Date         |        Link       | Agenda |
 |-------------|--------------------|-------------------|--------|
-| Agentic Authority Use Cases | October 13, 2025 | TBD | [here](https://github.com/decentralized-identity/trusted-ai-agents-wg/blob/main/agenda/agentic-authority-use-cases/agenda.md)
+| Agentic Authority Use Cases | October 13, 2025 | TBD | [here](https://github.com/decentralized-identity/trusted-ai-agents-wg/blob/main/agenda/agentic-authority-use-cases/agenda.md)|
+| MCP-i | March 31, 2026 | TBD | TBD |
 
 
 ## Resources 
