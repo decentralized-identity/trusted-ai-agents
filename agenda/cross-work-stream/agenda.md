@@ -1,3 +1,13 @@
+# 📅 2026-04-20 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Logistics and task force updates | Bumblefudge ||
+| 5min | Intro New Chair | Alan? ||
+| 5min | EU/Asia calls? | Bumblefudge ||
+
 # 📅 2026-03-02 Meeting Notes
 
 ## Agenda
