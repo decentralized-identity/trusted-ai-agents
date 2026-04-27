@@ -1,4 +1,38 @@
-# 📅 2026-04-20 Meeting Notes
+# 📅 2026-05-04 Meeting Notes
+
+## Agenda - SPECIAL TIME/LONGER MEETING - 9am PST/1800CET
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 30min | ITU and SIA read-out (for Hot Takes podcast) | Damian ||
+| 5min | Announcements, routine business | Bumblefudge ||
+| 25min | Post-IIW decompression | WG members ||
+
+# 📅 2026-05-04 Meeting Notes
+
+# 📅 2026-04-27 Meeting Notes
+
+## Agenda
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Logistics and task force updates | Bumblefudge ||
+| 5min | Next Week's Presi: ITU Agentic Readout for the Hot Takes podcast | Damian ||
+| 5min | Next Week - IIW decompression | Bumblefudge ||
+
+# 📅 2026-04-27 Meeting Notes
+
+- BF - Longer meeting next week, to do "read outs" about ITU+SIA (Damian) and IIW (everyone else); the former intended for the DIF Hot Takes podcast
+- Victor - Recap of Supply Chain security <> Agentic DID rabbithole I've been going down, which I mentioned on the MCP-i call last week
+  - [SPDX profile](https://spdx.dev/spdx-3-1-ontology-and-schema-available-for-review/) and [demo](https://spdx.github.io/spdx-spec/v3.1-RC1/)
+    - [business processes](https://spdx.github.io/spdx-spec/v3.1-RC1/model/Operations/Operations/)
+    - [hardware](https://spdx.github.io/spdx-spec/v3.1-RC1/model/Hardware/Hardware/) - piloted by german car manufacturers
+    - AI meeting not up to date
+    - [Slack](https://join.slack.com/t/spdx/shared_invite/zt-2fa9pqty9-AcobGadsN_TN1K~sSkUG4w)
+    - Threat Control mtg happening... now! Mitre never got around to defining "threat" in its ontologies...
+  - [IETF SCITT](https://datatracker.ietf.org/group/scitt/about/)
+  - [ODRL demo](https://odrl.dev.codata.org/demo)
+    - uses DIDs and wallets for open-data provenance
 
 ## Agenda
 
