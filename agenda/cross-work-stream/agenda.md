@@ -1,6 +1,8 @@
-# 📅 2026-05-04 Meeting Notes
+# Trusted AI Agents WG - Meeting Notes
 
-## Agenda - SPECIAL TIME/LONGER MEETING - 9.30am PST/18.30CET to 10.30am PST/19.30CET
+[![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
+
+## 📅 2026-05-04 Agenda - SPECIAL TIME/LONGER MEETING - 9.30am PST/18.30CET to 10.30am PST/19.30CET
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
@@ -8,11 +10,9 @@
 | 25min | Post-IIW decompression | WG members ||
 | 30min | ITU and SIA read-out (for Hot Takes podcast) | Damian & Guest Ward Duchamps (Thales) ||
 
-# 📅 2026-05-04 Meeting Notes
+## 📅 2026-05-04 Meeting Notes
 
-# 📅 2026-04-27 Meeting Notes
-
-## Agenda
+## 📅 2026-04-27  Agenda
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
@@ -20,7 +20,7 @@
 | 5min | Next Week's Presi: ITU Agentic Readout for the Hot Takes podcast | Damian ||
 | 5min | Next Week - IIW decompression | Bumblefudge ||
 
-# 📅 2026-04-27 Meeting Notes
+## 📅 2026-04-27 Meeting Notes
 
 - BF - Longer meeting next week, to do "read outs" about ITU+SIA (Damian) and IIW (everyone else); the former intended for the DIF Hot Takes podcast
 - Victor - Recap of Supply Chain security <> Agentic DID rabbithole I've been going down, which I mentioned on the MCP-i call last week
@@ -34,7 +34,7 @@
   - [ODRL demo](https://odrl.dev.codata.org/demo)
     - uses DIDs and wallets for open-data provenance
 
-## Agenda
+## 📅 2026-04-20 Agenda
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
@@ -42,7 +42,9 @@
 | 5min | Intro New Chair | Alan? ||
 | 5min | EU/Asia calls? | Bumblefudge ||
 
-# 📅 2026-03-02 Meeting Notes
+## ??? @dmitrizagudulin
+
+## 📅 2026-03-02 Meeting Notes
 
 ## Agenda
 
