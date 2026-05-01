@@ -1,12 +1,12 @@
 # 📅 2026-05-04 Meeting Notes
 
-## Agenda - SPECIAL TIME/LONGER MEETING - 9am PST/1800CET
+## Agenda - SPECIAL TIME/LONGER MEETING - 9.30am PST/18.30CET to 10.30am PST/19.30CET
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
-| 30min | ITU and SIA read-out (for Hot Takes podcast) | Damian ||
 | 5min | Announcements, routine business | Bumblefudge ||
 | 25min | Post-IIW decompression | WG members ||
+| 30min | ITU and SIA read-out (for Hot Takes podcast) | Damian & Guest Ward Duchamps (Thales) ||
 
 # 📅 2026-05-04 Meeting Notes
 
