@@ -2,15 +2,73 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
-## 📅 2026-05-04 Agenda - SPECIAL TIME/LONGER MEETING - 9.30am PST/18.30CET to 10.30am PST/19.30CET
+## 📅 2026-05-04 Agenda - SPECIAL TIME/LONGER MEETING - 9am PST/1800CET
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
 | 5min | Announcements, routine business | Bumblefudge ||
 | 25min | Post-IIW decompression | WG members ||
-| 30min | ITU and SIA read-out (for Hot Takes podcast) | Damian & Guest Ward Duchamps (Thales) ||
+| 30min | ITU and SIA read-out (for Hot Takes podcast) | Damian ||
 
 ## 📅 2026-05-04 Meeting Notes
+
+- Intros and announcements
+    - Travis (lyfe.ninja)
+    - Aaron - gTLD and eCommerce background - registry of agents for accountability
+        - ARIA
+    - Geun-Hyung (SKorea) - how to make trustworthiness for agentic ecosystems (national initiative here)
+        - See you Friday at 6pm 
+    - Mitchell Traverse - Agent Privacy / dual-agent architecture ; have been working on a dapp with Christian, traces of the convo on Slack, adding ZK features to archon;
+        - there's a large body of work on the subject, lots of transparency and ZKP aspects
+- IIW Favorites
+    - Alan: Claudry Hepburn - set up a agent who did crowd work, gave her own read-out at the end
+    - Alan: Agentic Identity is useless, prove me wrong session: Only Andrew held out and conceded nothing
+    - Alan: Only heard the word "blockchain" twice; less than half of sessions (in IIW proper) had anything agentic/LLM in the titles
+    - Aaron: First IIW ever, loved the format, looking forward to the notes; UTAH/SETI stuff was a big standout for me; saw KYA-OS
+    - Aaron: Verana (general-purpose blockchain-based trust registry) from south america
+    - Aaron: [ARIA](https://Aria.bar)
+    - Dmitri: 4th day, like a mini-IIW, lots of overlap
+    - Sidebar: Expert Systems versus LLMs versus non-LLM AIs
+        - "memory" as emergent property of LLMs; 
+        - Subra: Rulebased systems get so complex as you layer on enough rules that they become less knowable/reasonable, they can almost approach nondeterminism at 
+- ITU Readout from Damian and Ward Duchamps (Thales)
+    - Damian: themes
+        - agents can't solve new problems created by agents
+        - new protocols are hard, but agents change autonomy so much that OAuth won't work ever
+        - workloads are composite/multi-dimension; SPIFFEE not designed for cross-domain trust
+        - DNS panel
+        - OAuth session-based, coarse authZ (hard to constrain enough)
+        - Legal perspective (from a GDPR veteran): legal consequences staggering, need more lawyers in the loop if [EU] business is gonna be even able to much less willing to adopt this stuff
+            - code as law (governance in protocol layer) 
+    - Ward Duchamps: HUman intent is the new trust anchor
+        - similar takeaways and highlights
+            - need more lawyers fersure 
+            - one researcher projected 900 BILLION agents by 2030
+        - slides: how applicable/salvageable is OAuth
+            - ![image](https://hackmd.io/_uploads/Hk3BSLURWl.png)
+            - "Power of attorney"/foundation of dist. txn. needs some kind of additional trust mechanisms (distributed ledger for timestamps? confidential vaults?)
+                - OOB human strongly-authN'd to sign the initial intent doc
+        - Conclusions
+            - user defines what, agent chooses how
+            - time delay b/w intent and execution
+            - "agent defines data access paths"
+        - Q&A
+            - Subra: "human" "intent" is doubly vague, and "power of attorney" kicks it down the road a little
+                - Ward: We trained an agent to gather "intent" from humans, teasing it out via NL; we still try to translate that at inception into structured data for the intent; BF: Confirmation step? Ward: Reuse UX pattern of MFA, so confirmation can be used to "sign" the intent
+            - Alan: How express capabilities and intents? Ward: we're looking at VCs (VP pass from agent to agent); also looking at recent JWT formats cuz they're so cheap/easy to compute
+                - Alan: UCan or ZCap may be useful
+                - Ward: early days, we're assuming there will be a lot of design into that [DSL?]
+            - ???: Promise theory might be a good ontological basis for intents; agents can only promise and that works well for this kind of trust problem
+            - Matthew Rappard: Power of attorney revocable at any time: does that apply here as well? I think it should; in a medical case, for example, also good to maybe blind permissions even to person/actor checking them
+            - Alan: A2A negotiation needed? Ward: I think so, there will probably be more-trusted agents delegating to less-trusted agents
+            - Matthew Rappard: we found experimenting with agents that logging A2A interactions that there were huge legal risks (analogy: my lawyer talking to a specialist lawyer about my case, latter can be liable)
+                - Ward: Defined intent versus derived intent; historical interactions of a given agent can be measured against the fvormer
+            - BF: Distributed transactions - how unify the runtime? don't agents run on diff OSs, diff environments, diff org boundaries... how be sure they read/understand the intent (however constant/authenticate) the same way everywhere?
+                - Nicola: But for me, an agent is still, fundamentally a [distributed] workload, so we just need better transports and async messaging once we leave HTTP behind...; moving beyond the SAGA pattern, we have to rethink the _execution model_ (and secure it) without as much focus on identity; i think we need more delegation and less identity
+                - Ward: Intent > identity, which is basically a "nice have" ; anchor to intent, not identity
+                - Nicola: DID and SPIFEE will eventually be bridged; 
+                - Ward: Are you implicitly differentiating ephemeral agents from [relatively] long-lived, persistent, or memory-using ones? context identifier rather than an agent identifier?
+                - Nicola: Sure, but you can't assign permissions to a context
 
 ## 📅 2026-04-27  Agenda
 
@@ -22,6 +80,7 @@
 
 ## 📅 2026-04-27 Meeting Notes
 
+- The WG welcomed new DIF member Aaron Grego (president, ARIA AI Agent identity protocol @ Trust Layer Foundation) 
 - BF - Longer meeting next week, to do "read outs" about ITU+SIA (Damian) and IIW (everyone else); the former intended for the DIF Hot Takes podcast
 - Victor - Recap of Supply Chain security <> Agentic DID rabbithole I've been going down, which I mentioned on the MCP-i call last week
   - [SPDX profile](https://spdx.dev/spdx-3-1-ontology-and-schema-available-for-review/) and [demo](https://spdx.github.io/spdx-spec/v3.1-RC1/)
@@ -32,7 +91,7 @@
     - Threat Control mtg happening... now! Mitre never got around to defining "threat" in its ontologies...
   - [IETF SCITT](https://datatracker.ietf.org/group/scitt/about/)
   - [ODRL demo](https://odrl.dev.codata.org/demo)
-    - uses DIDs and wallets for open-data provenance
+    - uses DIDs and wallets for open-data provenance.
 
 ## 📅 2026-04-20 Agenda
 
