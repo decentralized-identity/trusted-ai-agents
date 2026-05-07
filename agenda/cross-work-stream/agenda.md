@@ -2,6 +2,13 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
+## 📅 2026-05-11 Agenda - SPECIAL TIME/LONGER MEETING - 9am PST/1800CET
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Announcements, routine business | Bumblefudge ||
+| 20min | AI Policy Task Force Kickoff? | Tom & Bumblefudge ||
+
 ## 📅 2026-05-04 Agenda - SPECIAL TIME/LONGER MEETING - 9am PST/1800CET
 
 | Time | Agenda Item | Lead | Notes |
@@ -58,8 +65,8 @@
             - Alan: How express capabilities and intents? Ward: we're looking at VCs (VP pass from agent to agent); also looking at recent JWT formats cuz they're so cheap/easy to compute
                 - Alan: UCan or ZCap may be useful
                 - Ward: early days, we're assuming there will be a lot of design into that [DSL?]
-            - ???: Promise theory might be a good ontological basis for intents; agents can only promise and that works well for this kind of trust problem
-            - Matthew Rappard: Power of attorney revocable at any time: does that apply here as well? I think it should; in a medical case, for example, also good to maybe blind permissions even to person/actor checking them
+            - Matthew Rappard: Promise theory might be a good ontological basis for intents; agents can only promise and that works well for this kind of trust problem
+            - Power of attorney revocable at any time: does that apply here as well? I think it should; in a medical case, for example, also good to maybe blind permissions even to person/actor checking them
             - Alan: A2A negotiation needed? Ward: I think so, there will probably be more-trusted agents delegating to less-trusted agents
             - Matthew Rappard: we found experimenting with agents that logging A2A interactions that there were huge legal risks (analogy: my lawyer talking to a specialist lawyer about my case, latter can be liable)
                 - Ward: Defined intent versus derived intent; historical interactions of a given agent can be measured against the fvormer
@@ -69,6 +76,9 @@
                 - Nicola: DID and SPIFEE will eventually be bridged; 
                 - Ward: Are you implicitly differentiating ephemeral agents from [relatively] long-lived, persistent, or memory-using ones? context identifier rather than an agent identifier?
                 - Nicola: Sure, but you can't assign permissions to a context
+                - Ward: we want to bring this to the ITU; working with Google's office of CTO to prototype this
+                - Juan: let's stay in touch on how permission is expressed
+                - Ward: agree, we need to converge on a solution through industry collaboration 
 
 ## 📅 2026-04-27  Agenda
 
