@@ -10,6 +10,20 @@
 | 5min | Deb's video: Delegation<>Guardianship? DIF Youtube? | Bumblefudge ||
 | 20min | AI Policy Task Force Kickoff? | Tom & Bumblefudge | See Slack for Tom's Proposal Notes and [Deb's draft report](https://identity.foundation/governance-of-delegated-authority-report/) |
 
+## 📅 2026-05-11 Minutes
+
+- Announcements
+    - IAM conf - Damian will be moderating a panel with an Okta Product Owner,  a security architect from a bank, CIAM lead from pharma on agentic security 
+    - EIC (Berlin, 19-22 May)- Grace is speaking on content creator assertions, Juan is organising DIF drinks in Berlin during the conference 
+- Deb's [video](https://www.youtube.com/watch?v=u-uWl_s0PPM) and how to frame it for a general audience
+    - Alan: Delegation !== Guardianship
+    - Deb: Intention was more use-case focused, to show how delegation works in this specific medical user story how to wrap a legal/medical situation in software
+    - Deb: [Threat model](https://docs.google.com/document/d/1VcsHZ7jOs3jzYOdD_BsVMw0D2Tri-Tb7sQsrbup5JoI/edit?tab=t.0) posted - please feed back 
+    - Juan: shared Tom's doc, [AI Constrained by Policy](https://docs.google.com/document/d/1uIBuaQw0mrx_brB3krQ7CgHUSCY60jTuV4xjnwHHtkY/edit?tab=t.0#heading=h.mfujiy6fu4iq). This contains a number of prospective work items, please review and think about if you'd like to collaborate 
+    - Mitchell Travers also features a split between generator / solver in his work - the solver is the deterministic part that sets the boundaries for what of the generated information is passed through. 
+    - Mitchell also flagged MyTerms - a Cedar flavour of a bilateral agreement between 2 agents. User privacy can be protected via policy or cryptography. He will present the approach to the group 
+    - Geun-Hyung Kim - new member said hello 
+
 ## 2026-05-08 Special Meeting - Onboarding for Eastern Hemisphere Time Zones Members
 
 - Intros
