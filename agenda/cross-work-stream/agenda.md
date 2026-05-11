@@ -2,14 +2,28 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
-## 📅 2026-05-11 Agenda - SPECIAL TIME/LONGER MEETING - 9am PST/1800CET
+## 📅 2026-05-11 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
-| 10min | Announcements, routine business | Bumblefudge ||
-| 20min | AI Policy Task Force Kickoff? | Tom & Bumblefudge ||
+| 5min | Announcements, routine business | Bumblefudge ||
+| 5min | Deb's video: Delegation<>Guardianship? DIF Youtube? | Bumblefudge ||
+| 20min | AI Policy Task Force Kickoff? | Tom & Bumblefudge | See Slack for Tom's Proposal Notes and [Deb's draft report](https://identity.foundation/governance-of-delegated-authority-report/) |
 
-## 📅 2026-05-04 Agenda - SPECIAL TIME/LONGER MEETING - 9am PST/1800CET
+## 2026-05-08 Special Meeting - Onboarding for Eastern Hemisphere Time Zones Members
+
+- Intros
+    - Anil (Rise11): US Healthcare, clinical trials (data governance, graph DBs → LLM/agentic interactions) - Compliance certs (geographical cloud processing restrictions as well as HIPPA) at risk of agentic mayhem
+        * Transition from APIs and third-party integrations/platforms to MCP/Agentic land - urgent data governance issues
+    - Goals: governance triage asap
+Gareth Fakhry (NZ) - lawyer and creative producer, blockchain law and identity in partic; Agentic <> ZKP convergence - cross-system AuthZ/AuthN requires incorporating lawful status and fiduciary lifecycle/evaluation into the technical system ( https://siltcore.org/ ); DIDs/digital-identity is a semantic layer that can be useful “outside” the system
+GaoWei: founded ANP (agent network protocol - allow all agents to communication and coordinate - open nonprofit) and 
+Sean (ANP) - went to IIW/AIIW 
+Tour of website, Slack, WG’s githubs
+How to prototype - post user story, discuss, [optional - present user story and prototyping approach on a call], prototype, share link, [optional - present/demo prototype on a call] 
+
+
+## 📅 2026-05-04 Agenda - SPECIAL TIME/LONGER MEETING - 9.30am**-10.30am** PST
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
@@ -112,6 +126,8 @@
 | 5min | EU/Asia calls? | Bumblefudge ||
 
 ## ??? @dmitrizagudulin
+
+- [Deb's amazing illustrative demo of a medical power-of-attorney delegation user story (YouTube)](https://www.youtube.com/watch?v=u-uWl_s0PPM)
 
 ## 📅 2026-03-02 Meeting Notes
 
