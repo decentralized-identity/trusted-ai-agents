@@ -2,7 +2,42 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
-## 📅 2026-05-04 Agenda - SPECIAL TIME/LONGER MEETING - 9am PST/1800CET
+## 📅 2026-05-11 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Bumblefudge ||
+| 5min | Deb's video: Delegation<>Guardianship? DIF Youtube? | Bumblefudge ||
+| 20min | AI Policy Task Force Kickoff? | Tom & Bumblefudge | See Slack for Tom's Proposal Notes and [Deb's draft report](https://identity.foundation/governance-of-delegated-authority-report/) |
+
+## 📅 2026-05-11 Minutes
+
+- Announcements
+    - IAM conf - Damian will be moderating a panel with an Okta Product Owner,  a security architect from a bank, CIAM lead from pharma on agentic security 
+    - EIC (Berlin, 19-22 May)- Grace is speaking on content creator assertions, Juan is organising DIF drinks in Berlin during the conference 
+- Deb's [video](https://www.youtube.com/watch?v=u-uWl_s0PPM) and how to frame it for a general audience
+    - Alan: Delegation !== Guardianship
+    - Deb: Intention was more use-case focused, to show how delegation works in this specific medical user story how to wrap a legal/medical situation in software
+    - Deb: [Threat model](https://docs.google.com/document/d/1VcsHZ7jOs3jzYOdD_BsVMw0D2Tri-Tb7sQsrbup5JoI/edit?tab=t.0) posted - please feed back 
+    - Juan: shared Tom's doc, [AI Constrained by Policy](https://docs.google.com/document/d/1uIBuaQw0mrx_brB3krQ7CgHUSCY60jTuV4xjnwHHtkY/edit?tab=t.0#heading=h.mfujiy6fu4iq). This contains a number of prospective work items, please review and think about if you'd like to collaborate 
+    - Mitchell Travers also features a split between generator / solver in his work - the solver is the deterministic part that sets the boundaries for what of the generated information is passed through. 
+    - Mitchell also flagged MyTerms - a Cedar flavour of a bilateral agreement between 2 agents. User privacy can be protected via policy or cryptography. He will present the approach to the group 
+    - Geun-Hyung Kim - new member said hello 
+
+## 2026-05-08 Special Meeting - Onboarding for Eastern Hemisphere Time Zones Members
+
+- Intros
+    - Anil (Rise11): US Healthcare, clinical trials (data governance, graph DBs → LLM/agentic interactions) - Compliance certs (geographical cloud processing restrictions as well as HIPPA) at risk of agentic mayhem
+        * Transition from APIs and third-party integrations/platforms to MCP/Agentic land - urgent data governance issues
+    - Goals: governance triage asap
+Gareth Fakhry (NZ) - lawyer and creative producer, blockchain law and identity in partic; Agentic <> ZKP convergence - cross-system AuthZ/AuthN requires incorporating lawful status and fiduciary lifecycle/evaluation into the technical system ( https://siltcore.org/ ); DIDs/digital-identity is a semantic layer that can be useful “outside” the system
+GaoWei: founded ANP (agent network protocol - allow all agents to communication and coordinate - open nonprofit) and 
+Sean (ANP) - went to IIW/AIIW 
+Tour of website, Slack, WG’s githubs
+How to prototype - post user story, discuss, [optional - present user story and prototyping approach on a call], prototype, share link, [optional - present/demo prototype on a call] 
+
+
+## 📅 2026-05-04 Agenda - SPECIAL TIME/LONGER MEETING - 9.30am**-10.30am** PST
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
@@ -58,8 +93,8 @@
             - Alan: How express capabilities and intents? Ward: we're looking at VCs (VP pass from agent to agent); also looking at recent JWT formats cuz they're so cheap/easy to compute
                 - Alan: UCan or ZCap may be useful
                 - Ward: early days, we're assuming there will be a lot of design into that [DSL?]
-            - ???: Promise theory might be a good ontological basis for intents; agents can only promise and that works well for this kind of trust problem
-            - Matthew Rappard: Power of attorney revocable at any time: does that apply here as well? I think it should; in a medical case, for example, also good to maybe blind permissions even to person/actor checking them
+            - Matthew Rappard: Promise theory might be a good ontological basis for intents; agents can only promise and that works well for this kind of trust problem
+            - Power of attorney revocable at any time: does that apply here as well? I think it should; in a medical case, for example, also good to maybe blind permissions even to person/actor checking them
             - Alan: A2A negotiation needed? Ward: I think so, there will probably be more-trusted agents delegating to less-trusted agents
             - Matthew Rappard: we found experimenting with agents that logging A2A interactions that there were huge legal risks (analogy: my lawyer talking to a specialist lawyer about my case, latter can be liable)
                 - Ward: Defined intent versus derived intent; historical interactions of a given agent can be measured against the fvormer
@@ -69,6 +104,9 @@
                 - Nicola: DID and SPIFEE will eventually be bridged; 
                 - Ward: Are you implicitly differentiating ephemeral agents from [relatively] long-lived, persistent, or memory-using ones? context identifier rather than an agent identifier?
                 - Nicola: Sure, but you can't assign permissions to a context
+                - Ward: we want to bring this to the ITU; working with Google's office of CTO to prototype this
+                - Juan: let's stay in touch on how permission is expressed
+                - Ward: agree, we need to converge on a solution through industry collaboration 
 
 ## 📅 2026-04-27  Agenda
 
@@ -102,6 +140,8 @@
 | 5min | EU/Asia calls? | Bumblefudge ||
 
 ## ??? @dmitrizagudulin
+
+- [Deb's amazing illustrative demo of a medical power-of-attorney delegation user story (YouTube)](https://www.youtube.com/watch?v=u-uWl_s0PPM)
 
 ## 📅 2026-03-02 Meeting Notes
 
