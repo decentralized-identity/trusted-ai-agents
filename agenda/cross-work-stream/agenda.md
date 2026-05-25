@@ -2,6 +2,88 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
+## 📅 2026-06-01 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Damian ||
+| 5min |  KYA-OS update | Damian ||
+| 10min | Demo of Flaxscrip/Mitchell two-agent explorations | Mitchel, Christian (DID Methods WG)||
+| Remaining Time | Keep discussing policy and/or governance work items struggling to be born | Bumble+Damian ||
+
+## 📅 2026-05-25 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 10min | Announcements, routine business - KYA-OS update | Damian ||
+| 10min | Demo of Flaxscrip/Mitchell two-agent explorations | Mitchel, Christian (DID Methods WG)||
+| Remaining Time | Keep discussing policy and/or governance work items struggling to be born | Damian ||
+
+## 📅 2026-05-25 Minutes
+
+- Announcements
+    - Erik Passoja: Led here by CAWG, recently posted a [response to a NIST](https://docs.google.com/document/d/1Mv0yYNkW_LU_uaaSs7VA1ep-0luRfl-NgvfFE0ORA2M/edit?usp=sharing) RFI that might be relevant here
+- KYA-OS feedback on [proposed roadmap](https://difdn.slack.com/archives/C0AK05AKHGV/p1778776535438769)
+    - Sachio's feedback [on Slack](https://difdn.slack.com/archives/C0AK05AKHGV/p1779652848654009): Cedar --> PaC, REL integration
+    - Alan's feedback [on Slack](https://difdn.slack.com/archives/C0AK05AKHGV/p1779209517045449) - points out some subtle assumptions about secret/key management (custodial and/or inside of agents), the scope of reputation, and privacy
+    - Tom's feedback and [threat model](https://docs.google.com/document/d/1rqNtqZ60yUF5EsE4-Nqfrih9Hbedyzcor9I1Wn19uHo/edit?tab=t.0) - unlinkability and the risk of "aggregation" of data that was decentralized/private at the time... but gets merged into a behavioral graph by leakage and "third-party sharing" at scale (huge risk to the privacy of principles/wards)
+- Restarted KYA-OS prototyping efforts
+    - most interest was around eCommerce use case
+        - Alan: Shopping cart usecases are kinda simple and have lots of purchase-semantic specifics; something involving collaboration or data-sharing exposes more problems
+    - Special Topic calls can start back up again if people want to prototype!
+        - Alan: My [transitive usecase](https://www.alanhkarp.com/UseCases.pdf) is always a good one to think through or start with
+            - Sachio: I definitely took inspo from Alan's use-case doc, and  "Composable attenuation" is definitely something I want to model; Anil (Rise11) was the one who thought a purchase/shopping would be a good place to start, and we drifted towards something like booking a flight because it had some complexity 
+            - Sachio: for legal reasons hard for me to contribute code, just review for now
+            - Grace: Aven (Steven) might be interested in helping to prototype on this, with or without KYAOS
+- Policy and Governance
+            - Alan: My work on "automated negotiation" (#20, 21, and 26 in https://alanhkarp.com/techreports.html)
+    - [Tom's document on AI Constrained by Policy](https://docs.google.com/document/d/1uIBuaQw0mrx_brB3krQ7CgHUSCY60jTuV4xjnwHHtkY/edit?tab=t.0#heading=h.mfujiy6fu4iq)
+    - Paul Knowles - the ["Legal" problem](https://medium.com/@paul_15561/vocabulary-before-standards-why-the-legal-community-must-move-first-on-autonomous-systems-b7ec705c6f66) is upstream of agentic governance 
+        - Tom: Dazza Greenwood would say legal and policy aren't two distinct categories, code is a metaphor for law and vice versa...
+        - Erik Passoja: consent + liability VC schemata proposed in CAWG... interested in comparing notes with how this group is thinking about intention and policy enforcement towards some day being able to INSURE these processes
+
+## 📅 2026-05-18 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Bumblefudge ||
+| 5min | KYA-OS v1 [roadmap - CFC](https://github.com/decentralized-identity/trusted-ai-agents/blob/main/agenda/agenda-kyaos-tf-2026.md#kya-osmcp--v1-scope) | Bumblefudge ||
+| 10min | AI Policy Task Force Kickoff? | Tom & Bumblefudge | See Slack for Tom's Proposal Notes and [Deb's draft report](https://identity.foundation/governance-of-delegated-authority-report/) |
+| 10min | Enterprise/runtime Identifier versus intent/distributed-transaction context | Tom | last-minute agenda proposal | 
+
+## 📅 2026-05-18 Minutes
+
+- Banter
+    - EIC
+        - DIDs in EBSI project
+- Please review [roadmap for KYAOS]()
+- Policy
+    - Tom's identifier question from the chat: "i would like to discuss the identifier for the agent provided by some enterprise versus the identifier of the data context supplied by the user and the service selected by the user."
+        - Subra: Yes plz, let's chat about that!
+        - BF: Seems like you always need both?
+        - Tom: The sticking point is always revocation - Need to distinguish transaction ID, not just agent ID
+            - Tom: Not a fan of KYA-OS current version - needs Transaction Revocation
+    - Cedar
+        - Alan: Sidenote, at IIW i found out formal methods people contributed significantly to the design
+    - BF: Who wants to prototype policy, whether in Cedar or REGO or whatever?
+        - Wilmer: don't wait for everyone, any 2 people can meet up and start playing with it! doesn't take much with agentic codegen
+        - Alan: in Deb's report, INTENT is an important input to any policy enforcement
+            - Tom: How express? Seems a pretty thorny category
+            - Alan: at AIIW, lots of people experimenting with LLMs modeling policy in natural language and translating (and formally verifying the product); these companies provide a custom, trained LM to do this policy work
+            - Tom: should the LLM have less autonomy when authoring policy, or _help_ a user; here a helper LLM or mini-/assistant lang model ("SLM" as it were)
+    - Subra: What is "intent" for you guys? intended outcome? 
+        - BF: distributed
+        - Alan: Agent Payment Protocol has a document called an "intent manifest" (easy to do with payments)
+        - Subra: If "it's the intent that matters", we need some semantics there...
+        - Alan: "I want you to book a flight that gets me to Boston for this conference" is an example... 
+            - slippage between "book me a flight" and "get me to the right city the night before the wedding/conference/etc" (and replan if that date changes)
+        - Alan: Deb's threat modeling doc is good at getting us to think through these issues
+    - Mitchell: +1 to Tom's approach to two-models with diff goals, I think that approach will catch on quickly
+    - Damian: Can a universal/baseline policy affordance be worth defining, or is it too vertical-specific?
+        - Tom: My doc proposes that baseline already, I think the CONDITIONS are domain-specific but the CONTAINER/general logic is universal
+        - Alan: Ontology problem? Tom: Meh, that's just versioning and DSLs
+- Wilmer: Wanna take lead on prototyping, will ping you (BF) on slack
+
 ## 📅 2026-05-11 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
