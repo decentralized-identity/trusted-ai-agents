@@ -2,6 +2,36 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
+## 📅 2026-06-08 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Damian ||
+| 5min |  KYA-OS update | Damian ||
+| Remaining Time | Keep discussing policy and/or governance work items struggling to be born | Bumble+Damian ||
+
+## 📅 2026-06-08 Minutes
+
+- Updates
+    - KYA-OS
+        - Alan: 
+    - Delegated Authority Reports Proliferating!
+        - Reports Family Tree
+            - s
+        - Dmitri went first for ZCaps - Coworking every Thursday until we have more! 
+    - Deb: Prototyping a Delegation-agnostic PEP/PDP
+        - Tom: What's the role of intent here? what kind of intent?
+        - Deb: stringing together GNAP AAuth and UCAN to compare what each container can do with a common intent identity
+            - AAuth has a "governance server" idea ; i've been working on some of these ideas since 2007
+        - Alan: Claudry Hepburn, for ex., has a RS PEP applied after agent's post-condition checks
+        - Deb: I have this "decision-package" distinct: agent request > normZ > PDP > decision package > PEP > RS
+        - Alan: Historically, intent was subject to an ontology problem
+        - Tom: Confidential Compute Consortium isn't touching cross-org; very hardware-centric
+            - (in chat): the trust problem can be looked at from the bottom up (like CC) or from the top down (multi-agent) - very different views
+        - 
+    - ITU
+        - 
+
 ## 📅 2026-06-01 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
@@ -10,6 +40,20 @@
 | 5min |  KYA-OS update | Damian ||
 | 10min | Demo of Flaxscrip/Mitchell two-agent explorations | Mitchel, Christian (DID Methods WG)||
 | Remaining Time | Keep discussing policy and/or governance work items struggling to be born | Bumble+Damian ||
+
+## 📅 2026-06-01 Minutes
+
+- The group welcomed Adolfo, co-founder of the Trust Layer Foundation (building ARIA protocol)
+- Annoucements
+    - KYA-OS Task Force meeting brought forward 1 hour to 9am EST (ongoing)
+    - Feedback received from Sachio, Alan, Tom & Agne on KYA-OS roadmap to date
+    - Dyland is incorporating all edits in one go  
+    - Please can others who wish to register their approval of the proposed V1 scope and/or feedback do so by giving a thumbs up on Juan's post (https://difdn.slack.com/archives/C0AK05AKHGV/p1778776535438769) or adding their feedback inline
+- Damian to add a note on the KYA-OS slack channel reminding people to register their approval / feedback (done)
+- Damian to invite feedback from H&T SIG chair, Creator Assertions chair (done)
+- Mitchell demo'd the approach he is developing with Christian to a privacy preserving dual-agent architecture, including a boundary-making agent / expert model plus delegation to an LLM based agent with access to a user's personal info  
+- The approach generates a knowledge graph based on trust tasks & verifiable relationship credentials, enabling 2 browsers to talk to each other without revealing any PII  
+- Questions from the floor on multiple ledgers using one key (answer is linked to key rotation), how to express trust relationships (answer: using promise theory), how the agent's behaviour is compressed as an observation of the runtime & how to trust the harness (answer: the geometry enables trust to port between ecosystems)
 
 ## 📅 2026-05-25 Agenda 
 
