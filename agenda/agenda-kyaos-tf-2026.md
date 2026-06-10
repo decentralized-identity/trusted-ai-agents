@@ -1,5 +1,94 @@
 # TAAWG - KYA-OS Task Force
 
+## 16 June 2026
+
+- update from Cheqd? x
+
+## 9 June 2026
+
+- Final feedback
+    - alan --> dylan: i think i've reworded everything conceptual
+    - kya-os.org migration (and schema migration) all done
+        - schemas + spec site repos both will move to decentralized-identity/kya-os-*
+- other dev updates
+    - more providers (make auth pluggable); fetch provider; storage provider
+    - tazos (sp?) from cheqd adding did:cheqd (and onchaining some receipts to cosmos chain); that [PR](https://github.com/decentralized-identity/kya-os-mcp/pull/93) is in progress
+    - need an API key for cloudflare Pages, then add it to the github repo
+- Steering Committee approval (tomorrow)
+    - Grace: Helps me to have an overview of reviewers and incorporated feedback
+    - Dylan: [changelog](https://github.com/decentralized-identity/kya-os-mcp/blob/main/CHANGELOG.md) in the MAIN repo is p thorough
+        - npm bump will bring this changelog with it
+    - Dylan: mostly the delegation-chain and fancy OAuth 2.1 stuff got differed to v1.2, examples 
+    - Grace: First pageload "intro" section still sounds like KYA-OS is only for MCP
+    - BF: "Community" link --> [WG Webpage](https://identity.foundation/working-groups/trusted-agents.html)? KYA-OS's existing Open Discord?
+        - Dylan: IdentiClaw demo was on the discord, but mostly non-commercial
+    - [GH Analytics worth a gander](https://github.com/decentralized-identity/kya-os-mcp/graphs/traffic)
+
+## 2 June 2026 
+
+- Adapter to connect to storage for persistence, plus OAuth adatper can be added to demos (one has one server that acts like the OAuth provider)
+- For spec site & schema, Juan got access to KYA-OS.org domain and pointed it to the spec site, schemas still need to be ported over (this week) - a second repo that will be transferred to DIF - will be source of truth for deployed schemas 
+- Rosalyn: Comment period is closed for KYA-OS
+- Dylan showed provider-registry, which will recognise different provider schemas (+ ability to add custom provider). Depends on auth method - credentials by default, also passkey, Google,Github
+- New auth methods can be easily added using a template (import default registry, pull in OAuth provider if OAuth)
+- Dylan's summary: 2 layers: auth method, registry provider 
+- Dylan will update the package this week 
+- Schema repo will have plug to deploy the site, deploying the schemas (will be deployed on PR push). E.g. if going over HTTP / using MCP, those implementations can use the specifics from any provider being used. 
+- If a provider submits their schema to the repo...
+- We could show on the website other orgs / tools which are adjacent to / compliant with / building with KYA-OS (e.g. MCP gateways)
+- Could do industry audit on who is aligned with what, which other servies are 
+- Value is in aligment, e.g. if all outbound requests have KYA-OS header attached with ID presentation, it tells other businesses there is traction in that pattern / promotes interop 
+- Next week Dylan will add more examples / reference implemetnations to the repo, plus show how the Auth adapter works / expand on it
+- Including flows e.g. you're a server operator and want both compliant and non-complaint agents to be able to connect, auth & consent flows before delegation credential is minted  
+- Repo analytics / insights - 90 unique clones in last 14 days
+- Vouched is creating a builder community to support orgs leaning in 
+- Damian to check if DIF has benchmarks from other projects 
+
+## 26 May 2026 - discussing roadmap feedback
+
+- migration update
+    - spec migration ready to go, will do later today (specs will move to kya-os.ai/mcp)
+        - repos will be transfered to DIF
+- Feedback (copied from Monday sync notes)
+    - KYA-OS feedback on [proposed roadmap](https://difdn.slack.com/archives/C0AK05AKHGV/p1778776535438769)
+    - Sachio's feedback [on Slack](https://difdn.slack.com/archives/C0AK05AKHGV/p1779652848654009): Cedar --> PaC; REL integration (as part of pluggable AuthZ); arbitrary .well-known filenames (to align with NANDA, Agncy, etc); OAuth 2.1 adapter interface strongly recommended in later versions
+    - Alan's feedback [on Slack](https://difdn.slack.com/archives/C0AK05AKHGV/p1779209517045449) - points out some subtle assumptions about secret/key management (custodial and/or inside of agents), the scope of reputation, and privacy
+    - Tom's feedback and [threat model](https://docs.google.com/document/d/1rqNtqZ60yUF5EsE4-Nqfrih9Hbedyzcor9I1Wn19uHo/edit?tab=t.0) - unlinkability and the risk of "aggregation" of data that was decentralized/private at the time... but gets merged into a behavioral graph by leakage and "third-party sharing" at scale (huge risk to the privacy of principles/wards)
+    - Restarted KYA-OS prototyping efforts
+        - most interest was around eCommerce use case
+            - Alan: Shopping cart usecases are kinda simple and have lots of purchase-semantic specifics; something involving collaboration or data-sharing exposes more problems
+        - Special Topic calls can start back up again if people want to prototype!
+            - Alan: My [transitive usecase](https://www.alanhkarp.com/UseCases.pdf) is always a good one to think through or start with
+                - Sachio: I definitely took inspo from Alan's use-case doc, and  "Composable attenuation" is definitely something I want to model; Anil (Rise11) was the one who thought a purchase/shopping would be a good place to start, and we drifted towards something like booking a flight because it had some complexity 
+                - Sachio: for legal reasons hard for me to contribute code, just review for now
+                - Grace: Aven (Steven) might be interested in helping to prototype on this, with or without KYAOS
+- Feedback discussion
+    - Sachio's feedback
+        - Dylan: Generalizing "just Cedar" to more PAC stuff makes sense; going pluggable there makes sense, as with AuthZ; the OAuth stuff is already pluggable upstream, was already planning on bringing it over; 
+            - Sachio: wise to standardize Interface, and let multiple implementations compete for the AS integrations and OAuth methods; I think adoption hinges on smooth integration with many diff kinds of OAuth [2.1] flows and configs
+        - Dylan: 
+            - will fix terminology in V1;
+            - Generalizing Cedar to PoC and pluggable AuthZ we will target spec in 1.1 and support in 1.2 depending on our internal timeline;
+            - arbitrary manifest files (//NANDA registries) seems an easy change, was waiting to see how they evolve but can get those in 
+        -  Sachio: ZCap folks wanted to use ODRL cuz it integrates cleanly; this is what I meant by beyond Cedar 
+    - Tom's feedback
+        - Dylan: lots of overlap with Alan's - lots of it is addressed [in the changelog](https://github.com/decentralized-identity/kya-os-mcp/blob/main/CHANGELOG.md)
+        - linkability is a bigger problem - if we want unlinkable credentials, that probably couldn't happen any earlier than 1.2, let's call that 1.X; in the meantime, spec can mention this
+            - Sachio: did:peer for ephemeral DIDs would work, but spec is ambig, looks like did:webvh is being used in the impl?
+            - Sachio: can't remember exactly what, but I think there was a contact7 bug where spec didn't match and messages weren't parsing/verifying right; Dylan: contact7 and brave-mcp were just in there for an example 
+    - Alan's feedback on credential formats (VCs vs ZCAP / UCAN)
+        - Binding permissions to specific enumerated resources depends on the AuthZ DSL (Tom's "missing context" feels related); 
+        - Dylan: Credentials other than delegation are now rejected by default (to avoid confused deputy). Reference issuer.Tightened capability language in the spec. User DID field in schema now reads “whose delegated authority the agent exercises”. Many changes to the spec to reflect Alan’s feedback, including updates to trust model, threat model, revocation. Introduced principal & responsible party as first-class terms.    
+    - Alan's feedback on registration flow
+        - Dylan: updates made to conformance requirements, language on re-delegation (to ensure agent needs to request this if delegation revoked) 
+    - Alan's feedback on Directory of MCP-I endpoints
+        - Dylan: we now have the schema, not updated at the time of Alan’s feedback 
+    - Alan's feedback on revocation
+        - Dylan: Level3 requires strictest conformance re auditability; UCAN handles revocation as an explicit delegatable permission, could be a good flow to use. Language in spec has been updated to state statuslist / bitstring not required for permission revocation 
+    - Alan's feedback on reputation management 
+        - Dylan: believe his feedback was around the search functionality on KnowthatAI 
+
+
 ## 14 May 2026 - v1 Roadmap
 
 - donation of KYA-OS-core is live! 
@@ -11,7 +100,7 @@
     - CONTRIBUTING.md policy for PR review process
 - v1 Roadmap
 - Next Steps
-    - [ ] BF - announce 14-day review people 
+    - [X] BF - announce 14-day review people 
     - [ ] Dylan - Rename spec website & 301 all links (incl schemata) - donate repos that build those two sites as well
     - [ ] BF - recruit TSC to review as well 
     - [ ] WG to decide after that how and when to present V1 to SC for approval (next SC in 3 weeks!)
