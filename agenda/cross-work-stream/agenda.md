@@ -6,8 +6,8 @@
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
-| 5min | Announcements, routine business | Damian ||
-| 5min |  KYA-OS update | Damian ||
+| 5min | Announcements, routine business | Juan |
+| 5min |  KYA-OS update | Juan ||
 | Remaining Time | Keep discussing policy and/or governance work items struggling to be born | Bumble+Damian ||
 
 ## 📅 2026-06-08 Minutes
@@ -30,7 +30,7 @@
             - (in chat): the trust problem can be looked at from the bottom up (like CC) or from the top down (multi-agent) - very different views
         - 
     - ITU
-        - 
+        - Juan: try to make intent machine-readable versus context snapshot. Need trust in others' runtimes. 
 
 ## 📅 2026-06-01 Agenda 
 
