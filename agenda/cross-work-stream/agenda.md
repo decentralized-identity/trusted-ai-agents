@@ -13,9 +13,28 @@
 ## 📅 2026-06-15 Minutes
 
 - Announcements, routine business 
-- KYA-OS (new earlier meeting time!)
+    - Alan attended Identity Salon. Inc IAM & Security leaders at Fortune 50 companies. Attenuated delegation was raised, had to be explained to participants! 
+    - Fable (new Anthropic model) / CLI [anecdotes](https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/)
+    - Alan: This reinforces for me that we Need to filter LLM requests through a non LLM policy engine (e.g. Clawdrey Hepburn )
+    - Erik: we'll all have AIs tied to our devices, e.g. Siri - how will access be gated? 
 - delegated authority update
+    - Update from DA group: Dmitri has written up his description of ZCAPs, Alan doing the same for UCAN. Juan working out how to merge in Governance considerations / threat model / protocol assessments (so they are interlinked and function as a suite of related specs)
+- KYA-OS (new earlier meeting time!)
+    - Update on KYA-OS group - approaching consensus on V1, some are waiting to see how V1.2 looks / how extensible it is, to fully endorse it. 
+    - Ran out of time for SC to approve last week, will happen asynch
+    - Convos still happening on prototyping KYA-OS
+    - Liability for Bearer Tokens: Tom did some thinking on why they suck / whether they are still acceptable. 
+    - Alan: agrees with the problem. Bearer tokens are the last resort. Proof of possession - can I prove I'm the designated holder. OAuth RFC to do this is D pop. 
+    - Tom: One next step could be to look at the liability model for more complex tokens. 
+    - Juan: any time you create a bearer token you're encouraging impersonation by the agent
+    - Alan / Juan: you would also need to bolt on extra surveillance to enable bearer tokens to be auditable
+    - Tom: liability for bearer tokens is very unclear. Without an AUD you can't assign responsibility 
+    - Alan: Token exchange still uses bearer tokens, albeit enabling attenuation and revocation
+    - Juan: Agents swallow up bearer tokens like cookies, API keys etc
+    - Erik: designed the consent mechanism for CAWG. When the token is transferred, it can include consent declarations. 
+    - Juan: Single Sign On also uses a bearer token! 
 - future work: policy and/or governance work items, terminology list?
+    - BF working on getting the AAIF Taxonomy WG's working draft as a possible starting point or input doc 
 
 ## 📅 2026-06-08 Agenda 
 
