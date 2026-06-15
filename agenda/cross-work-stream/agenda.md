@@ -2,6 +2,21 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
+## 📅 2026-06-15 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Juan |
+| 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble+Damian ||
+
+## 📅 2026-06-15 Minutes
+
+- Announcements, routine business 
+- KYA-OS (new earlier meeting time!)
+- delegated authority update
+- future work: policy and/or governance work items, terminology list?
+
 ## 📅 2026-06-08 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
