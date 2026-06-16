@@ -1,8 +1,29 @@
 # TAAWG - KYA-OS Task Force
 
-## 16 June 2026
+- future topics
+    + statusList2021 - does it need to be public/global? should the spec encourage non-public URL usage of statusList2021, or authN'd/internal-only/RS-side revocation anyways, à la UCAN/ZCap?
+        + is this a quick PR or a directional thing? do we need more donations/a pluggable revocation mechanism?
 
-- update from Cheqd? x
+## 23 June
+
+- agenda
+    + discuss cheqd usecase and PR next week?
+    + post-approval timeline (blog post, etc)
+    + developer advocate?
+
+# 16 June
+
+- feedback on v1 draft
+    + 1 SC member: DIF-wide deprecation of did:web/recommendation of did:webvh? 
+        + bf: I think this is a v1.2 or v2 thing, we should try to get an extension in after did:cheqd
+        + rosalyn: talked to verana.io
+    + alan: i don't think my point about revocation and claims made it into the edits; i'll leave more comments on slack (see below)
+- post-approval?
+    + blog post? grace: just posted about the donation, would be redundant, so let's think of a good way to post about it (interview? some other narrative?)
+        * rosalyn: v1-1.2 roadmap; action plan? 
+- damian: Curity (sp? IAM in Nordics) working on agentic authZ; saw KYA-OS as a bridge from CIMD-identified agents --> OAuth
+    + alan: VCs often bound to client identities; so worth asking how to use CIMD without a "client registration" problem; delegation and revocation of permissions != delegation and revocation of claims
+    + statusList2021 revocation for example doesn't need to be globally readable/unauthNd; 
 
 ## 9 June 2026
 
