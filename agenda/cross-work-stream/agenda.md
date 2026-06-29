@@ -2,6 +2,94 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
+## 📅 2026-06-22 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Juan |
+| 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble+Damian ||
+
+
+## 📅 2026-06-29 Agenda - SPECIAL TIME - starting half an hour early
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 30min | KYA-OS and/or CIMD for agents | Judith (Curity) ||
+| 5min | Announcements, routine business | Juan |
+| 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble+Damian ||
+
+## 📅 2026-06-29 Agenda 
+
+- Judith Kahrer (Curity) - primary product is a specialized AS
+    - CIMD <> KYA-OS?
+    - CIMD URL-->doc <> did:web -->doc
+    - OAuth WG context at IETF
+        - Other CIMD<>Agent stuff in the OAuth WG
+            - Core CIMD [internet-draft](https://datatracker.ietf.org/doc/draft-ietf-oauth-client-id-metadata-document/) - up to 5th iteration since July 2024 now
+            - [Authlete](https://www.authlete.com/developers/cimd/) [AuthZero](https://auth0.com/blog/cimd-vs-dcr-mcp-registration/) [Takahiko Kawasaki](https://darutk.medium.com/cimd-metadata-policy-c25969b538b6)
+        - Judith: i-d for how AS can challenge an MCP client directly ("on behalf of the MCP Server")
+            - Context: MCP server (until recently) needed to authZ clients 1 by 1 (for a given scope)
+                - scopes hard to decide upfront; long-running task or background/monitoring tasks (i.e. renewing grants)
+                - mandate more important than scope - have been thinking in that direction
+    - Damian: KYAOS?
+        - Dylan:
+        - Judith: CIMD borrows lots of the DCR protocol; i see DIDs as key DISCOVERY; delegation [VC] could be a mandate; i see CIMD as a did specifically for running code; there was a [draft in OAuth workload identity<>ClientID merger](https://www.ietf.org/archive/id/draft-ietf-oauth-spiffe-client-auth-02.html) (why did it use SPIFFE but not a DID? could've used either or both)
+            - Dylan: Yeah that makes sense
+            - Dylan: Revocation and attenuation easier to reason over when each actor is DID-identified; the KYA-OS system has "levels" (for progressively authorizing an agent MORE over time, as more trust signals and attestations accrue to it); see [spec here](https://www.kya-os.org/mcp/docs/concepts/verification-protocol/flows)
+            - Nicola: SPIFFEE is very efficiency-focused, so DIDs might be much slowed in many contexts; so maybe it's worth exploring "bootstrapping" to SPIFFEE where possible, DID slow lane? (or some future SPIFFEE or SPIFFEE-like thing that's more flexible on data shape, so that DIDs are easier to integrate)
+            - Judith: Yeah, totally, SPIFFEE AND DIDs makes more sense than XOR
+                - Nicola: DIDs good way to identify a given model/config/harness, but running it 10 times in parallel can spin up 10 SPIFFEEs for each ephemeral instance
+        - Dylan: the
+        -  
+    - Grace: OAuth systems and DID systems need a bridge, so this is a promising direction for me as ED of DIF
+        - Judith: I haven't made up my mind about how to bridge or whether to bridge, but OAuth has its own various key discovery mechanisms
+            - Judith: If you want to authN clients that are id'd by a did, you'll need to translate to downstream OAuth APIs anyways (token exchange, etc), whether it's translating the same key into OAuth-native key expressions
+            - Dylan: A registration record (pointing to a SPIFFEE id) is an ephemeral token, the authority stops at the AS that gave it the bearer token? downstream servers are just expecting bearer tokens, not DPoP
+            - Judith: Yeah but that's not an agent-specific problem, most contexts where downstream servers are handed a bearer token are already secured otherwise? Dylan: probabilistic/nondeterministic software changes the terms a little, i would think... 
+            - Alan: OAuth the protocol or OAuth the token?
+            - Alan: History of DCR's sybil problem, which they keep adding another layer and another layer of identity docs; 
+    - Concluding
+        - Dylan: CIMD + mandate is a great onramp to a good e2e provenance layer
+        - Damian: What's exciting here is a way for an agent to bring a CIMD or a DID and get treated the same way
+        - BF: Join DIF! Or just present an IP-safe version
+        - Alan: AI Security conf at Stanford; 
+- Regular Business
+    - Tom: Presentation [at CCG yesterday](https://github.com/TomCJones/threat-modeling/blob/main/models/Threats%20created%20by%20the%20introduction%20of%20Intelligent%20Agents%20to%20the%20WWW.md)
+        - CCG reminded me SSRF isn't here and should be
+        - Dylan: Are there levels of trust here, or relative weight/urgency/threat?
+            - Tom: I think there are level of infra trust (Apple Wallet most people trust a lot) versus... Dylan: Yeah, a captcha
+        - Tom: caveat, cloudflare started this and the major browser vendors are all behind it now
+    - 
+
+
+## 📅 2026-06-22 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Juan |
+| 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble+Damian ||
+
+## 📅 2026-06-22 Minutes
+
+- Updates
+    - KYA-OS - waiting on SC, v1.1 design issues up next
+    - Delegated Authority
+    - [LFDT workshop](https://www.lfdecentralizedtrust.org/privacylondon) - Damian will represent us
+        - Damian: Tell me what to ask/yell!
+        - DIDs versus CIMD?
+            - Dmitri: CIMD was invented in parallel to DIDs (or reinvented it?)
+        - DIDs versus OIDC-provisioned identifiers and metadata documents
+            - Dmitri: DCC did a report on how to use OIDF registry (URL-to-"metadata statements" mapping) as a VC issuer-registry; 
+            - Tom: Federation spec is orthogonal and fairly distinct from the rest of the OIDC structure; it's a generic registry of URLS --> entity statements
+    - Sidebar on long-lived identifiers
+        - Erik: Not all opaque identifiers are created equal! SAG-AFTA member# is on a need-to-know basis, needed for payroll/licensing, so selective-disclosure is key
+            - Consent TF at CAWG - URI that needs to contain (shielded at least) some legally actionably identifiers and TDMAI consent to help platforms gate their content, so that's what we're designing
+            - School yearbook photo usecase: narrow licensing + "Take it Down Act" - maybe people will start reading HTTP headers 
+
+
 ## 📅 2026-06-15 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
