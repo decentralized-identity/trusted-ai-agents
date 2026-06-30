@@ -4,6 +4,25 @@
     + statusList2021 - does it need to be public/global? should the spec encourage non-public URL usage of statusList2021, or authN'd/internal-only/RS-side revocation anyways, à la UCAN/ZCap?
         + is this a quick PR or a directional thing? do we need more donations/a pluggable revocation mechanism?
 
+## 30 June
+
+- agenda
+    + v1 standard approval check-in
+    + Presentation yesterday: CIMD vs DCR
+        + Dylan: other RFC in play at IETF would provide unidirectional link from a CIMD to a WIMSE? particularly if so, I see CIMD as a good good "level 0" onramp to KYAOS
+        + Dylan: in our system, DID is key-bound identity, CIMD would just be a base-level did:web equiv
+        + BF: I was curious about the "key discovery"
+        + Dylan: I think OAuth still ends up at a bearer token; 
+        + Dylan: I'm very curious if she's asking for help authoring or accepting contributions about a section of her i-d/rfc
+            + CIMD > DID > Mandate more valuable to KYAOS than DID > CIMD > Mandate
+                + bf: what if mandate could take either as a subj? dylan: idunno, slippery slope... 
+        +
+- push to next week
+    + KYA-OS builder community
+    + post-approval timeline (blog post, etc)
+    + discuss cheqd usecase and PR 
+    + developer advocate?
+
 ## 23 June
 
 - agenda
