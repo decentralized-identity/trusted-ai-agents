@@ -2,13 +2,13 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
-## 📅 2026-06-22 Agenda 
+## 📅 2026-07-06 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
 | 5min | Announcements, routine business | Juan |
 | 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
-| Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble+Damian ||
+| Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble ||
 
 
 ## 📅 2026-06-29 Agenda - SPECIAL TIME - starting half an hour early
@@ -20,7 +20,7 @@
 | 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
 | Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble+Damian ||
 
-## 📅 2026-06-29 Agenda 
+## 📅 2026-06-29 Minutes  
 
 - Judith Kahrer (Curity) - primary product is a specialized AS
     - CIMD <> KYA-OS?
