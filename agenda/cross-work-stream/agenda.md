@@ -2,14 +2,23 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
+## 📅 2026-07-13 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Juan |
+| 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| 10min | Integrating AAuth permissioning into my running prototype for auditable agentic delegations | Deb Bucci || 
+| Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble ||
+
 ## 📅 2026-07-06 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
 | 5min | Announcements, routine business | Juan |
 | 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| 10min | Discuss agentic possibilities for the new HTTP verb (QUERY) [RFC](https://datatracker.ietf.org/doc/html/rfc10008#name-introduction) | Tom Jones || 
 | Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble ||
-
 
 ## 📅 2026-06-29 Agenda - SPECIAL TIME - starting half an hour early
 
