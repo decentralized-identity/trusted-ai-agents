@@ -2,6 +2,45 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
+## 📅 2026-07-27 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Juan |
+| 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| Remaining Time | Read-out from Agentic BoFs/I-Ds at IETF Vienna | Bumble (and Grace?) ||
+
+## 📅 2026-07-20 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Juan |
+| 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| Remaining Time | Read-out from ITU AI-for-Good | Damian ||
+
+## 📅 2026-07-20 Minutes
+
+Tom - has anyone defined what an agent is? 
+Alan - a piece of software dependent on an LLM. Given a task by a user. It can then autonomously decide how to carry out that task. 
+Tom - I don't see why an agent needs an identity. Alan - I agree.
+Erik - we should def have an identity, so it can be tied to a responsible party. 
+Alan - the agent acts on the legal person's behalf. Tracking the agent only needs an identifier visible to the operator.
+Erik - I would use the word semi autonomous. 
+Alan - I wrote a paper called "AI Agent identity is useless". https://docs.google.com/document/d/1N4Y2adf4LQs3tZGJm1hJ2VLqikRptr0Rd6dPCUGNJSA/edit?tab=t.8jy77r4bo2dg ALso https://www.linkedin.com/feed/update/urn:li:activity:7391222507598643202/
+https://www.linkedin.com/feed/update/urn:li:activity:7394426845611540480/ (Alan's definition of the 4 properties of identity)
+Because we use identity for 2 things: establish trust and track responsibility. 
+Dmitri - the id is useful for accountability
+Erik - disagree. I think the agent needs an identity not an identifier. Agents need Provenance, consent, authorisation, liability. For these to be true, we need a human to be resposible. 
+Tom - I run my own agent on my own computer. From time to time it needs to do something offsite. If you are the owner of the agent that starts the process, you may not be the owner of the agent that finishes the process. We need something more abstract
+Alan - if I have a program on my machine that uses your web service, isn't that analagous? 
+Erik - the big issue with identity is, how easy is it to redact information / track someone using their identity? 
+Alan - agree, however we're looking from the other side, assigning responsibility. 
+Alan - put together a chapter on different capability systems. Would be nice to have a sentence or two on each of them. E.g. mararoons and biscuits are both bearer tokens, we decided to discount them. Bearer token - whoever holds it can use it, v hard to keep them secret on the open internet, therefore we wanted proof of posession, e.g. zkaps - only someone with the private key can use the capability. 
+Alan - KYA-OS has addressed the problems with using VCs for this. I believe they are doing a decent job. 
+Tom - what did method are people using with KYA-OS? I didn't find the ones in the spec acceptable. Are they in production? 
+Damian - suggested that Dylan joins an upcoming WG call to answer this. 
+
+
 ## 📅 2026-07-13 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
@@ -11,6 +50,51 @@
 | 10min | Integrating AAuth permissioning into my running prototype for auditable agentic delegations | Deb Bucci || 
 | Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble ||
 
+## 📅 2026-07-13 Minutes
+
+Announcements
+- KYA-OS meeting one hour later starting this week/tomorrow! See DIF Calendar
+
+Intros - Cooper Halpern, intern for digital governance institute, joining to get perspective on DIF and how the field is working 
+Updates - not too much new on kya-os, mostly discussion about marketing & outreach. Also meeting is moving back to the original time (1 hour later)
+DA - please ship without Sachio's section, he is still waiting for clearance to contribute
+Alan - did a search for certificate-based capability systems. Won't need a full chapter on each, more like 2-3 sentences. 
+Juan - has been hearing about cookie based sandboxing and context limiting approaches, as a stopgap. 
+Alan - this approach works fine for your agent, but not if an outside agent needs to communicate with you. 
+Juan - agree, in a distributed MAS you need better approaches to delegation.
+Mitchell - has implemented a 'cookie jar' solution for a federated research wiki [based on ward c's fedwiki](https://github.com/WardCunningham/Smallest-Federated-Wiki) (using cookies to set boundaries between read and write for agents). Delegation chain becomes vulnerable once you leave your environment. 
+    - "quite myterms-y"
+Next week is IETF in Vienna - Juan can provide a link dump of anything that might be useful after the event. 
+Debb's presentation. What she has been working on for the past year, much of which is informed by the WG's discussions. Idea is to capture intent, looking at protocols that could be used. Components include a Mission Builder, a Stage Gate Engine and a Governance PDP (Deny / Restrict / Allow), Capability Registry. 
+Debb shared an example of what the data output looks like. 
+The envelope is protocol agnostic and can accept various inputs. 
+She is meeting the AAuth group next week. Also just spoke to Dick Hardt. They don't want anything to do with attenuation. 
+Person Server (~== wallet?) & Mission will likely use LLM (??). 
+Alan - comment on the use of "Governance PDP" as terminology. (Governance is in content/human/legal layer in most systems) ; Deb: but isn't this is a technical decision with governance consequences? is the policy static?W
+Alan - uses the term "Validator" for the PDP. 
+Juan & Alan - agree that governance is the act of creating policy, PEP is where it gets evaluated at runtime. 
+Juan - how to make this deterministic enough to qualify as PEP and PDPs? 
+- Debb - the AAuth discussion assumes any person server would have access to a governance decision. should i call that policy?
+    - Alan - this is what I've been calling the verifier. Governance is more the creation of the policy. 
+    - conventionally, there's a PAP (policy access point) for access policy at runtime
+Juan - AAuth refers to a 'person server' vs a personal assistant. They are trying to give it its own PAP, enabling it too to evaluate non-deterministic inputs at runtime. I.e. the agent brings its policy, the server brings its policy and they need to evaluate each other.
+Juan - has recently been thinking about DIDComm and its competitors. Original assumption was that everyone controls a cloud agent working on their behalf - now IETF is assuming this will be a reality soon. 
+Alan - suggested to add KYA-OS (this was Debb's ask, to flag DIF work items that should be on her chart). AAuth can't do attenuation, so This won't work once I need to give an EXTERNAL agent my query. 
+Debb - if a mission is defined well enough, it can drive some of the oversight. 
+Nicola - if everyone has their own person server, they also need their own identity. If you keep chaining identity, what problem are they solving? There is already OAuth token exchange. They are inventing a solution that will chain identity, what's different from OAuth? Someone still needs to know everyone on earth, non?
+Alan - the big change from OAuth is not needing client registration. 
+Nicola - chaining identity but for what? you're chaining identifiERS, and what does that even get you? Feels like patches that don't work around the lack of consistency (in [CAP Theorem sense](https://en.wikipedia.org/wiki/CAP_theorem)), eventual consistency is more realistic for an actually distributed system
+    Deb: not chaining identities so much as chaining authorizations/receipts; 
+BF (in chat): maybe the Person Server and Attenuation/delegation are out of scope for the same reason-- they want all that to happen at a HIGHER layer, which this layer doesn't get audit/log access to?
+like, if PS is opaque to this authZ language, and attenuation/negotiations happen there... it's out of scope to be out of the logs/SLAs/liabilities...
+Tom (in chat): Missions are seldom static. They often need to request additional permissions during execution.
+Juan - we need to understand WHY the AAuth team thinks it will work / they don't need attenuation. 
+Tom - "person server" is a non sequitur. 
+Juan - the AAuth spec calls the person server's negotiation with the other server "governace". 
+Debb - I'm focused on the 'are you allowed to do this' piece. 
+Alan - the person server is a "power box" that has all your permissions (i.e. its very powerful). When you ask it to do something, it's bounded by the permissions in your power box. The agent can ask for more permissions from the power box / person server, based on the mission. The agent has a subset of your permissions - where attenuation comes in. 
+Juan - summarising, this is great context for the DA report & understanding Debb's chapter. IETF likes 'thin' layers.
+
 ## 📅 2026-07-06 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
@@ -19,6 +103,29 @@
 | 5min |  KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
 | 10min | Discuss agentic possibilities for the new HTTP verb (QUERY) [RFC](https://datatracker.ietf.org/doc/html/rfc10008#name-introduction) | Tom Jones || 
 | Remaining Time | Keep discussing policy and/or governance work items struggling to be born, maybe a terminology list? | Bumble ||
+
+## 📅 2026-07-06 Minutes
+
+- Banter
+    - new members & Vouched exploring OAuth integrations
+- KYA-OS update
+- RFC10008
+    - Tom: nota bene: IETF HTTP BIS WG doesn't define HTTP, that's still W3C jurisdiction
+    - Tom: trust registries are a legal hallucination, I think the protocol and connection ceremony is worth thinking about
+        - Tom: I think [MyTerms](https://myterms.info/ieee7012-standards/) is going a little crazy
+        - "ceremony" from karl ellison
+    - BF: Legal relationships are in scope... if you want it
+        - Subra: KERI has some cool legal capabilities, non?  BF: totally! worth including
+    - Alan: Does IEEE -7012 include some kind of intent?
+        - see section b-2 [in the spec](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11360682)
+    - Tom: does it make sense to push down into OSI level 4? is that crazy?
+        - BF: idunno conneg is p cool?
+        - Tom: I think the issue is more about trust models-- can you really trust an endpoint to REPRESENT the legal entity that own/runs it? can you trust TLS? Did they give the TLS keys to CF? is amazon.com (run by amazon US) trustable to obligate amazon UK to ship me? isn't it even worse to trust an agent based on who runs its domain apex?
+            - alan: good point
+    - Grace (in chat): therapy usecase might unearth more legal complexity than just "go buy me things, agent!" usecase
+        - Tom: Recent german case: LLM model made responsible hallucinations 
+        - responsibility and authority get real bad
+    - 
 
 ## 📅 2026-06-29 Agenda - SPECIAL TIME - starting half an hour early
 
