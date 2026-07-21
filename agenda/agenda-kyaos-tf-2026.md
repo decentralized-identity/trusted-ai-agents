@@ -4,6 +4,53 @@
     + statusList2021 - does it need to be public/global? should the spec encourage non-public URL usage of statusList2021, or authN'd/internal-only/RS-side revocation anyways, à la UCAN/ZCap?
         + is this a quick PR or a directional thing? do we need more donations/a pluggable revocation mechanism?
 
+## 21 July 
+
+- agenda
+    + v1 standard approval check-in
+- Discussion 
+- Dylan: delegation will live in the other doc, the KYA-OS doc will focus on the spec. 
+- Dylan updated the doc based on 3 comments shared by Matthew
+- Advanced AI Society is working on proof of control (enables external audit & determination of compliance status e.g. with EU AI Act, HIPPA), based on 4 levels. Dylan demo'd KYA-OS, mapping to their framework. He is considering doing a reference implementation based on this. 
+- Alan: what does control mean? 
+- Dylan: probably something that an insurer would require. Aligns to KYA-OS assurance levels.
+- Dylan / Damian to send over entity card spec to Judith, get her thoughts on how CIMD mapping will work
+- Update to core MCP spec is due late July / August. Consider submitting KYA-OS as an extension under the Identity track. 
+- Grace: spec was approved by SC, next step is to announce on the blog (avoid being repetitive).
+- Also re IETF, there are lots of side meetings / preliminary discussions, currently unclear what IETF expects its role to be viz a viz AI. Current work items: Small things e.g. workload identifiers for AI. Potential Large items: discovering agents using DNS. ITU is asking to collaborate and divide up scope in a logical way.
+- Anthropic has implementations that may move into IETF. From DIF, KYA-OS could be a candidate work item, however DIDs aren't a good fit for IETF & Grace is advocating for a discussion about artitecture. Currently we see ITU as a better collaborator as they are in advanced discussions about what is in scope. DIF is seeking partners willing to have an open discussion. 
+- Dylan: China and Singapore have 3x d visits to the KYA-oS page in the past few months. 
+- Grace: IETF is not welcoming to non-OAuth approaches. 
+- Also if we want to include participation from China, we may need to look at different communications tools (Zoom may be blocked).  ITU uses Meet You, very good & privacy preserving. 
+- Alan: being untactful about OAuth generates good discussions, e.g. at IIW. 
+
+## 14 July 
+
+- agenda
+    + v1 standard approval check-in
+- Discussion 
+- Re CIMD / client registration discussion / upcoming MCP release, there is a draft for adding a server JSON file. Nanda uses Agent Facts. Also one that A2A uses. Lots of proposals. 
+- Dylan added PR to KYA-OS repo to use the same verifier for all presentations in different formats. See https://github.com/decentralized-identity/kya-os-mcp/blob/main/SPEC-ENTITY-CARD.md - includes a demo
+- Alan: how do we deal with the semantics of what the words in the presentation mean.
+- Dylan: they are trying to define the terms. 
+- Alan: since we're dealing with LLMs,we have the opporutnity to describe the agent properties using natural language.  These could be independently attested in a VC. Example: "My agent understands how to read weather maps and will charge you 5 cents", signed by the National Weather Service. The advantage is you get round the need for everyone to agree on a precise ontology. "My experience is attempts to get precise on these things always fail"
+- Dylan: AAuth uses the Governor (an LLM to handle governance). Alan is not a fan!
+- Matthew Rappard: I think the eventually the agent will cache the description in some intermediary agent format.I think it’s not an OR but an AND.  I think we can use natural language, but inevitably a TAG or some other more computer version will have utility.
+- Alan asked about "Delegation Chain" and "Audience". 
+- Dylan: this relates to if there's a multi hop scenario. 
+- Alan: it's a claim delegation rather than a permission delegation. Dylan: yes.
+- Alan: the whole mess with client registration in OAuth is it breaks cross domain. 
+- Dylan: agree. I see CIMD support as an on-ramp into the protocol. 
+- Matthew: We might have multiple proof for multiple trust registries so the “audience” would describe which trust registry this proof was for.
+
+- Matthew (in chat): The “Status of This Document” section says the stateless proof coexists with the legacy proof “under the same _meta key.” Section 8.1 then says they deliberately use separate keys:
+    + _meta["org.kya-os/proof"] 
+    + _meta["org.kya-os/proof@1"]
+    + I think the first is a contradiction
+- Next steps for the entity card? 
+    - Dylan: might demo/PoC something for AAIS with this (their levels map to KYAOS's), 
+    - also send to Judith to see if it passes basic OAuth WG sanity-check
+
 ## 30 June
 
 - agenda
