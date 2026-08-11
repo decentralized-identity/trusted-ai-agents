@@ -1,8 +1,110 @@
 # TAAWG - KYA-OS Task Force
 
-- future topics
-    + statusList2021 - does it need to be public/global? should the spec encourage non-public URL usage of statusList2021, or authN'd/internal-only/RS-side revocation anyways, à la UCAN/ZCap?
-        + is this a quick PR or a directional thing? do we need more donations/a pluggable revocation mechanism?
+[![hackmd-github-sync-badge](https://hackmd.io/q4ooV2G8RLy64ejstykq3g/badge)](https://hackmd.io/q4ooV2G8RLy64ejstykq3g)
+
+## future topics
+- statusList2021 - does it need to be public/global? should the spec encourage non-public URL usage of statusList2021, or authN'd/internal-only/RS-side revocation anyways, à la UCAN/ZCap?
+    + is this a quick PR or a directional thing? do we need more donations/a pluggable revocation mechanism?
+
+## 11 August
+
+Agenda:
+- spec site transfer update - this week ideally!
+    - /kya-os-schema/
+    - /kya-os/
+        - should have spec itself, glossary, etc; README links to all other repos
+        - could have IP/WG-governed demos (if separate)
+    - /kya-os-usergroup/  
+        - builder-registry (render to subdomain) and BUILDER demos (if separate) 
+- builder registry update
+    - pending spec transfer-- will go live on kya-os.org subdomain or path (sep repo so that it can be publically PRable)
+- Def Con - Dylan won 2nd place at their competition for his KYA-OS presentation! :tada: I'd like him to share that with you all
+    - ![image](https://hackmd.io/_uploads/By_BenOUfe.png)
+    - left pane: Claude (with kya-os connector enabled, and using a DEFCON badge as signer via FIDO2)
+        - ![image](https://hackmd.io/_uploads/SJFsg2uIzl.png) - signing events show a confirmation on the badge screen!
+    - right pane: revocation server running locally, with realtime event-log updates, and links to cosmos explorer to see CHEQD txns on-chain
+    - [loom recording here](loom.com/share/f32b82a292f14a6c952dba3a0a246e45)
+    - cheqd's onchain DRL version of statusList! Something like `resolver.cheqd.net/1.0/identifiers/did:cheqd:testnet:17bc59fe-2e93-4e01-8613-c7c4560adcf2?resourceName=kya-statuslist...`)
+    - Alan: but if you ask claude to send 11 and the limit is 10, won't it just send as 2 txns?  Dylan: (tries it) well i'll be darned
+        - bf: what about swarms? do they have swarm-wide or dist-txn-wide budget? alan: is there a "delegatable quota", so that people can delegate a fraction of their own budget to delegees? Dylan: Not... currently.  will have to think about that.
+    - Dylan: What's a sensible default limit for Depth of delegation chain?
+        - Alan: antipattern- you never know how many delegations a cross-org txn with multiple swarms might take! 20 or 30 might be normal in some usecases. if you limit delegation length, you're encouraging the guy (or the agent) at the last link to impersonate or share creds to get
+        - BF: i'd make it configurable, some people will need lower limits for performance reasons (or needing entire chains to be expressible as a token, or base64 string of less than X length, etc, depending on the delegation DSL, backlinks by ref or by value, etc)
+        - Alan: just think of delegation depth as a DOS vector, verifier is going to need to apply heuristics to inbound tokens anyways to protect itself from overruns and slow-downs...
+- v1.0.1 - list of topics to cover for the next update and future updates. Note that Dylan and Rosalyn are meeting with DIF SteerCo next week to obtain their guidance on versioning and required ratification
+    - sidebar: VC 1.1-->2.0 is breaking change... need to figure out how to manage that
+        - bf (in chat): btw, Dylan, re: the breaking changes, one way to manage the VC2.0 thing would be to have a working draft or editor's draft of v2.0 already; it's a little confusing, and no need to link to it from the kya-os.org version of the v1.x spec, but it's a way to pre-design breaking changes now that don't get into effect until all the other breaking changes are decided
+- [last-minute, not pre-announced] BF: SEP and MCP Registry entry PR? 
+
+## 4 August
+
+Agenda
+- Rosalyn: v.1.0.0 press release impact
+    - repo clones and forks up bigly, lots of new issues
+    - Dylan shared some numbers: 1055 clones in the past 14 days, huge uptick since the annoucement. 193 unique cloners. 138 unique visitors.  
+    - 282 clones the day of the new MCP
+- Rosalyn shared a [LinkedIn post](https://lnkd.in/p/e6-iJDkc) to the effect that KYA-OS: Vouched handed it to the Decentralized Identity Foundation in March. 6 contributors, 263 commits in the last 90 days. More than all of AGNTCY (led by Cisco), and AP2 combined. Last push four days ago. AP2: Google handed it to FIDO Alliance on 28 April, the same day v0.2 shipped, zero commits since. I checked FIDO's GitHub org directly: 11 repos but nothing AP2 or payments related.
+- spec site transfer
+    - will transfer today, then cloudflare stuff
+- builder registry
+    - included in the transfer
+- v1.0.1 - what should be addressed in our next update?
+- [IzuruToys' issue on the main repo](https://github.com/decentralized-identity/trusted-ai-agents/issues/42) and Lars' very thoughtful [analysis on DIF Members-only Slack](https://difdn.slack.com/archives/C08NNP7PZ6Y/p1785648060668859)
+    - VCDM v1 versus v2
+        - v2 should be added later? at time of press, v1 was vast majority in the wild
+            - issues [#151](https://github.com/decentralized-identity/kya-os-mcp/issues/151) and [#152](https://github.com/decentralized-identity/kya-os-mcp/issues/152) already merged, address this
+        - human use-case -- ask to write up the use-case?
+- Grace: [AIdentity & Non-Human Identity Impact Day 2026]()
+- MCP extension update: Dylan: Must have an "experimental" WG under the AAIF to post MCP extensions. 2 properties in the spec for extension discovery. extension-discovery governed by the MCP WG there (also separate SemVer).
+    - [template to create a WG here](https://modelcontextprotocol.io/community/charter-template) 
+    - Dylan: process for extensions =
+        1. maintainer or member (?) has to champion from the jump
+        2. submit use-case
+        3. dedicated interest group or WG create for that use-case w/a Lead with "contributor" status on MCP itself
+- Juan: AAIF 'gave' DIF a seat in the AAIF; he was told at the time that the governance of each donated codebase is separate to the cross-org WGs. MCP-specific governance wasn't clear yet
+    - Dylan: 
+        - I found a fine-grained Auth meeting to join, but it felt more researchy; 
+        - [CONTRIBUTING.md](https://github.com/modelcontextprotocol/typescript-sdk/blob/main/CONTRIBUTING.md) got beefed up on the MCP SDK;
+        [extension submission process docs]() now uses more IETF MUST/SHD lang; 
+            + current process requires ALL NINE core maintainers to approve each extension!
+        - Dylan is still navigating the orga (discord and LF-wide calendar a little disjoint)
+            - see also [WG listing](https://modelcontextprotocol.io/community/interest-groups/auth)
+        - Rosalyn: you need some clout at AAIF to get an extension approved; we are looking into how to navigate this / get the extension sponsored; working with [AAIS](https://advancedaisociety.org/) on a pilot, they're evaling KYA-OS for recommendation/approved status
+    - Dylan: WG leads must be on the contributor ladder
+    - Grace: could we tap up a DIF friend who is on the ladder, e.g. Huawei are participating in AAIF
+- Alan: Delegation to "Juan's Key"; short-lived delegation and short-lived keys
+    - Dylan: I think that query is implicit int he entityCard spec; the delegation keys are single-use/single-purpose; agentCard has a CNF prop (fingerprint) for ROOT key, but derived keys used for all the delegation stuff; where no card is present, it treats delegated key as identity for logging purposes
+    - Alan: Often an implicit assumption people bring to identity and delegation; being explicit in the spec couldn't hurt
+    - BF: isn't this protocol-specific? Alan: AAuth and OAuth give ME the new ephemeral token to give to you, 
+    - Dylan: Newest [PR](https://github.com/decentralized-identity/kya-os-mcp/pull/157/changes) cleans this up a bit
+        - BF: 
+    - Alan: BCP for delegation-specific ephemeral keys is for key to be generated by the delegee and returned to the delegatOR to be registered in logs... but that's not always possible, so that can only be a SHOULD and you gotta manage careful pragmatic exception
+- Grace: [KupCole talk in Munich Oct](https://www.kuppingercole.com/events/nhiid2026) - Grace applied copy-pasting from KYA-OS spec and blog posts, I can represent`. Title: Who Approved That? The One Question Your Agent Logs Cannot Answer
+- Grace: Will Vouched be at IdentityWeek DC? Rosalyn: Vouched is going, not sure if we specifically will go
+    - Grace: If you DO go, meet Will from HAND (CAWG)
+- Rosalyn: What's in V1.0.1. 
+    - Dylan: Candidates: Did:webvh, bitstring vs StatusList 2021
+    - Grace: breaking changes / moving from V1 to V2 will need to go to TSC
+
+## 28 July
+
+- MCP seems to be  ["going stateless"](https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/)
+    - that'll break lots of people, but not us, we were early adopters of `_meta` sidecar for metadata
+    - one error code will break, lol
+    - extensions registry established by [SEP-414](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/seps/414-request-meta.md)
+        - the `org.kya-os/mcp` doesn't work for naming the extension, so landed on `/delegation` because our delegation stuff 
+        - debate around semantics/devex: what should come after the /
+            - alan: delegate is neat, it's on trend these days (delegation > impersonation) 
+            - bf: provenance or verification? mroe general, not everyone uses the delegation stuff
+            - dylan: maybe lead with the uniq value prop? /consent? /human-on-the-loop? alan: /openworld-auth? dylan: /decentralized-authz? bf: /decent-auth alan: "in an open authorisation world, every participant has it's own authz policy"
+- sidebar how to AAIF
+    - BF: ask for a presentation-time at identity & trust wg (every other Thursday)
+    - Dylan: the PR asap on MCP/auth-ext, would I&T WG help get that PR merged sooner? How do i get the attn of the MCP governers?
+        - BF: couldn't hurt, but probably additional measures would help more
+            - BF: business case most important for getting a quick merge
+        - Dylan: DEFCON proof-of-control framework (Bob Montgomery, Dick Hardt, Midnight, MHuang (sp?), insurers/underwriters) ==> SOC2-like certification
+            - [kya-os POC against that framework](https://poc.kya-os.ai/)
+            - Juan: when talking about KYA-OS at e.g. DEFCON, reference mapping to e.g. AAIF / Advanced AI Society frameworks to fend off general objections to "decentralized tech" and anchor in real threat modeling and business case
 
 ## 21 July 
 
