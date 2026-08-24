@@ -2,6 +2,36 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
+## 📅 2026-08-24 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Juan |
+| 5min | KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| ?min | Demo Update? (see last week's minutes) | Erik Passoja |
+
+## 📅 2026-08-24 Minutes
+
+- Intros
+    - Alan: Huggingface attack éxposé from NYT on Slack - 
+        - Tom: Prompts didn't tell the model to show restraint or where to look-- it just found vulns that would've impressed most cybersec experts; the models find weaknesses quite well
+        - Alan: At stanford agentic security conf, "stop on fail"
+        - Alan: Zeynep Tayfecki: agents fail differently than humans do
+- TF updates
+    - Delegated Authority - editing, v1 soon
+    - KYA-OS
+        - SemVer
+        - BF: Going to MCPCon/AGNTCON
+        - Grace: Repping KYAOS at KuppCole Agentic and nonhuman id conference 
+- Erik's Presi - different kinds of trust (CAWG Spec chapt 9)
+    - backstory: likeness rights is personal for me
+    - deepfake scams (post-Turing Test reality :grimacing: ); insurance fraud (adversarial AI can't detect, will never reliably enough detect; watermark debates)
+    - legislative backdrop: laws specifying outcomes but no certain way to deliver
+        - ![image](https://hackmd.io/_uploads/Hka-IxcDfe.png)
+    - Eric: "the new sheriff in town is going to be the ACTUARY"
+    - Q&A
+        - redteam me!
+
 ## 📅 2026-08-17 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
