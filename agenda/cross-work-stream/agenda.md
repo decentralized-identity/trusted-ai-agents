@@ -2,13 +2,47 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw/badge)](https://hackmd.io/I2BRY1EOSH-BzZ8a2SQvHw)
 
-## 📅 2026-08-24 Agenda 
+## 📅 2026-09-14 Agenda - Longer Session (ITU AI-for-Good Summit Hot Takes Before w/Damian and Ward Churchill (Thales))
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 30min | ITU AI for Good Summit "Hot Takes" (Podcast) recording | Damian ||
+| 5min | Announcements, routine business | Juan |
+| 5min | KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| ?min | Demo Update? (see last week's minutes) | Erik Passoja |
+
+## 📅 2026-09-07 Agenda - US Holiday! 
+
+async updates on Slack!
+
+## 📅 2026-08-31 Agenda 
 
 | Time | Agenda Item | Lead | Notes |
 | :---: | :--- | :--- | :--- |
 | 5min | Announcements, routine business | Juan |
 | 5min | KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
 | ?min | Demo Update? (see last week's minutes) | Erik Passoja |
+
+## 📅 2026-08-31 Minutes
+
+- Delegated Authority updates
+    - https://identity.foundation/delegated-authority-evaluations/ live
+        - [X] BF will fix TOC and relink Alan's affil SitePassword (link to [github](https://github.com/alanhkarp/SitePassword/))
+    - VC chapter
+    - Sachio's WIMSE/OIDC federation chapter
+- KYA-OS - builder's registry, MCP update,,,
+- Other Announcements and Topics
+    - Alan: Working on a different approach in an essay called "Assigning Responsibility" to work through some framing disagreements that came out of editing the report
+    - Identity Salon (H Flanagan) - Delegation focus this issue of the newsletter and this week's [event](https://luma.com/kkhsik9z)!
+    - Alan: lots of podcasts bemoaning the Huggingface Apocalypse these days
+
+## 📅 2026-08-24 Agenda 
+
+| Time | Agenda Item | Lead | Notes |
+| :---: | :--- | :--- | :--- |
+| 5min | Announcements, routine business | Juan |
+| 5min | KYA-OS (new earlier meeting time!), delegated authority update | Juan ||
+| ?min | Product Presi (see last week's minutes) | Erik Passoja |
 
 ## 📅 2026-08-24 Minutes
 
