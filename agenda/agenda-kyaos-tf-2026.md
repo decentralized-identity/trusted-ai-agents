@@ -3,8 +3,215 @@
 [![hackmd-github-sync-badge](https://hackmd.io/q4ooV2G8RLy64ejstykq3g/badge)](https://hackmd.io/q4ooV2G8RLy64ejstykq3g)
 
 ## future topics
+
 - statusList2021 - does it need to be public/global? should the spec encourage non-public URL usage of statusList2021, or authN'd/internal-only/RS-side revocation anyways, à la UCAN/ZCap?
     + is this a quick PR or a directional thing? do we need more donations/a pluggable revocation mechanism?
+
+## 20 Oct
+
+- Grace: KC event went well. Demo landed, one of the participants is speaking to Juan potentially about membership, works with big Enterprises in Germany & wants something that's implementable on-prem / not tied to any vendor's solution 
+- Dylan. Re Fraser's [comment on Request proof binding](https://github.com/decentralized-identity/kya-os-mcp/issues/253), invited Fraser to shape this as a potential contribution
+- Dylan submitted a [new PR 15min ago](https://github.com/decentralized-identity/kya-os-mcp/pull/256) for envelopes & schema we went over last week
+    -  Doesn't include the execution side (request binding, deterministic algorithm for processing)
+    - does include other stuff we covered like payment, intent/manifest, constraints/caveats
+    -   doesn't cover idempotency/journal-recovery capability or storage 
+-  Does include payment authorisation, caveats, outcomes, evidence references, outline for MCP negotation & mappings to adjacent protocols 
+-  alan: what's the rela to e.g. AP2 or other prior art's intent/manifest semantics?
+    -  dylan: the payments protocols all have some kind of intent or mandate object, we are trying to be a transport-level/substrate solution that has a lowest-common-denom intent/mandate answer in case no more specific one is provided in the data;
+    -  dylan: the mandatory info at this layer is somewhat orthogonal, and more permissions/authZ focused ("evidence-"); but this extension adds a few more mandatory items that can provide minimal answers to multiple protocols' messages on top
+    -  Alan: more concretely: do the dictionary terms map 1:1? is a "manifest" here an AP2 manifest?
+        -  Dylan: not 1:1 in every case, more of a lowest-common denominator
+- Alan: it would be good to docuemnt a comparison of existing authorisation manifests / data models / protocols, and a justification for why a new one is needed (para or two at most)
+- Juan: part of the justification is to have a fallback in case the 'happy path' is not available 
+- Dylan: Recovacation is tricky because you want to be able to cancel a transaction before it reaches the payment processor
+- Working design docs [on member-only Slack](https://difdn.slack.com/archives/C0AK05AKHGV/p1791571106410819?thread_ts=1791383056.947339&cid=C0AK05AKHGV) 
+- PRs welcome
+    - Execution context protocol
+    - double-checking what each commerce protocol would additionally need
+    - [8.4.6 algorithm for verification](https://github.com/decentralized-identity/kya-os-mcp/blob/f32bab579be236c5662eb54da26cb09682d8b857/experimental/payment-authority/SPEC-PAYMENT-AUTHORITY.md#846-verification-order) in particular could use close and wide review
+        - Alan: like old compilers that stopped (and threw) on first compile error, maybe it's better to keep going and report ALL failures in one response? Could be a MAY instead of a MUST to allow both ways?
+        - BF: maybe worth being loose in case some [future] commerce protocols requires verbose error logging or something; i can imagine those tradeoffs might be contextual, not universal
+        - Dylan: Actually Ive been benchmarking it for time and compute, I should think about how i'm measuring that and measure 
+        - Alan: Third option: do a few quick-exit checks first, and then all-or-nothing the complex-to-evaluate stuff? the more we talk the more i think this should be implementation-specific
+        - Dylan: revocation list entails a query (and uncertain latency thereof); so far i've been mostly optimizing for latency and mitigation of expiry/revocation clockskew (partic of intermediary permissions)
+    - [Standards mapping section](https://github.com/decentralized-identity/kya-os-mcp/blob/f32bab579be236c5662eb54da26cb09682d8b857/experimental/payment-authority/SPEC-PAYMENT-AUTHORITY.md#12-standards-mappings) in partic could use some love
+    - [WG open questions too](https://github.com/decentralized-identity/kya-os-mcp/blob/f32bab579be236c5662eb54da26cb09682d8b857/experimental/payment-authority/SPEC-PAYMENT-AUTHORITY.md#open-working-group-decisions)
+        - extension namespacing - can someone use this without using MCP-core?
+            - BF: pro of one being extension of the other is it mitigates cornercases around using a new version of one with and old version of the other, etc-- versions lockstop to the parent namespace
+            - Dylan: also worried the payments piece could evolve faster and get more outside contribution...
+            - no need to decide soon, will think
+- dylan: I think it's ready for people to play with please  extensions and hacking --> good tire kicking
+    - most urgent feedback on execution/algorithm sections 
+- dylan's action items
+    - TOC
+    - wordsmithing pass on "narrow only" --> "non-escalating"/"non-widening"
+- Alan: asked if there is a section on privacy. Dylan confirmed this is the case. 
+- Juan: the privacy and security sections will probably need to be re-done before V2; once there are mutiple implementations a lot can change
+- Dylan: the only heavy lifing for a verifier wishing to implement KYA-OS is there are multiple considerations / decisions to make within 8.4.6 Verification Order 
+- Juan: the spec doesn't need to be tightly coupled to one implementation's goals e.g. speed of response vs reducing round trips is context-dependent; best to start with a bit of leeway, in case someone needs to break a 'rule' as their goal is different to the reference implementation 
+
+
+## 13 Oct
+
+- Further workshopping of [internal draft](https://h0bb5.dev/v/YF4lcXZBWQp-hgB-NnMjmNnliqLeAcwCursGZIlAchY) of payments profile extension to spec-as-published
+    - Fraser: Shopify, Stripe & Google are each in 2 -3 implementations of the protocols compared in his matrix (versus KYA-OS) 
+    - Dylan: provided a walk through of the KYA-OS Authority Profile Flows
+    - All other protocols phone home to Visa Agent Pay - but what happens before the token exchange is untouched
+    - We're trying to stitch together the entire session so the merchant can verify the tx, connecting the protocols into a common authority layer
+    - When a payment intent is created KYA-OS hashes this into an IntentDigest, adding protection against confused deputy, man in the middle etc. If the fingerprint changes, the tx can't be processed (barcode)
+    - Post verification the system creates a transaction authorisation (not for money / payment
+    - Rail Adapters allows KYA-OS to work across different protocols in x402, card, bank, wallet
+    - Merchant receives intent digest and requested rail
+    - It will get complex once a merchant wants to accept different rails, each rail does things differently 
+    - The merchant's verifier will require certain properties to be present and won't accept the transaction without these (mandatory) properties 
+- Broader discussion - KYA-OS as not just an MCP extension, but a more general "engine" for identifying and logging agents in any context/gateway
+    - Sachio: is KYA-OS still an MCP wrapper, or are you building for additional protocols? 
+    - Dylan: we view KYA-OS as like TLS for agents, a supplemental protocol that's hidden; it's about applying the bindings to whatever rails / harness / endpoint / gateway the agent touches. MCP is the reference implementation and a good starting point. 
+    - Sachio: maybe i should see this as a proxy for many things, including MCP, A2A based agents, Langchain based workflows, Http endpoints etc. Then users like me can pick and choose which components we use, so if i want to build my own implementation for e.g. agent identity / binding agent ID / workload ID / accountable entity through KYC / KYB. Is that the idea? 
+    - Dylan: that's exactly it! 
+    - Sachio: very good!!
+    - Juan: this is a natural opening for additional contributions 
+
+## 6 October
+
+- webvh
+
+## 29 September
+
+CommerceTalk
+
+- Reviewing Dylan's [explainer](https://h0bb5.dev/v/YF4lcXZBWQp-hgB-NnMjmNnliqLeAcwCursGZIlAchY)
+    - caveats (internal) versus payments profile add-on?
+    - schema linked from doc but it's 404
+
+## 22 September
+
+- Rosalyn: having announced v1.0.0, the focus is on developing the spec, including integrating payment protocols 
+- Dylan: the idea is to add a payments schema. Also paying to add support for did:webvh 
+- In UCP it would be part of the mandate / delegation that's constructed. Binding between the user and agent, spend cap etc. The actio 
+- The payment protocols don't answer the 'before the card' moment. You're at the mercy of the token provider for any session telemetry. e.g. being tamper evident. 
+- Having this before session start until transaction time is what KYA-OS woud provide. 
+- You could have an MCP server set up with KYA_oS, choose which token /tool call / delegation it's bound to, we'd still do the delegation minting. 
+- A third party verifier would be able to use KYA-Os
+- Sachio; what i could image is taking x402 as an example, some client as agent whos intent is based on some approved to make payment, that request is conveyed with consent to pay .e.g. if A2p / x402, that info is conveyed to the MCP server so now KYA-oS can support 
+- Please order would have check out intent, 
+- I want to standardise a profile for that so that the properties (e.g. currency type) are consistent . Then agent signs the request, 
+- We'd still want the attenuation on the delegation e.g. budget. 
+- Sachio: if we look at this from an architecture perspective, there are multiple ways of locating the policy enforcement point. E.g. put it in a sidecar. What i'm seeing recently is enterprises putting a proxy / gateway or multiple of them in front of each MCP, versus KYA-OS which is more of a wrapper intercepting ALL inbound on a given MCP. KYA_OS could do this and convey information . 
+- KYA-OS may also act as an MCP gateway. How do we provide capability to integrate PDP / PEP? 
+- Fraser - don't account-model blockchains solve the budget issue, i.e. via x402?
+    - x402 vs AP2 vs ACP UDP (UCP?)?
+    - Dylan: [AP2 captures the mandate as a VC](https://ap2-protocol.org/ap2/flows/) referenced by every event. "Budget" is a very hard thing to model in these kinds of things, i haven't seen that in any of the protocols
+        - maybe that's merchant-side concern, not really our problem? 
+        - are we doing enough if we coarsely distinguish "shopping" agents from agents with some access to a wallet?
+        - The objective is fine grained control. what level of human verification is required to enable this? 
+        - Decisions about when to step up authz lies with the merchant. Maybe KYA-oS does't need to decide or log every little thing and maybe being aware of the data models/categories/signals used to make that decision (e.g. in FinOS) might be enough?
+        - Damian: How can we make KYA-OS useful to merchants deciding how much agentic traffic to allow?
+        - Dylan: I think KYA-OS is already there, the merchant can already advertise merch via UCP, accept payments via x402, parse tokens from various payment protocols from out of a delegation and pass it along... our abstracting over the x402 complexity makes it comparable to traditional fiat payments from a merchant's POV; 
+    - damian: what's the UX like? is the kya-os step exposed to user?
+        - Dylan: ideally, if the consent is already given, the delegation step can be invisible; can't always be hidden, though, for example an x402 wallet binding/selection, or an ACP confirmation; 
+    - damian: schema alignment? translating between differences in protocol minutae?
+        - dylan: sort of, but usually the protocols don't differ that much; one outlier would be [kya-pay](https://kyapay.org/) by skyfire
+        - fraser: can we borrow from AP2's mandate idea, for example? is it just data dictionary work
+        - dylan: payment profile could be attached to each txn to fill in any missing inputs 
+        - dylan: the hardest things to enforce here are time and budget and revocation; it's unclear what is in our scope
+            - skyfire for example just does it as a bearer token; it functions more by expiry than revocation
+- power to spend (race condition between multiple parallel agents?)
+- Sachio: been playing with did:webvh; agent cards in nanda and a2a are self-signed, but webvh would make these a little more externally-signed/verifiable
+    - open issues:
+        - witness stuff is unclear
+            - dylan: me too
+        - performance/resilience concerns around statusList 
+            - bf: more writers --> smaller bitstring/file, i would think? no BCP i can think of
+            - matthew: statuslist is usually a govtech anonymity/herd-privacy thing; if you don't need anonymity, as small as possible (even just one list per operator or platform); one footgun i've suffered is counterparties caching it every 10sec, so consider a no-cache flag if you need them to get up-to-the-second data
+            - sachio: when kill/revoke manifest versus kill spiffe/runtime
+
+## 15 September
+- Dylan reported out on a standards-focused workshop on agentic commerce attended by Vouched. 2 day conference hosted by Google. Attended by Huawei, shopify, visa, stripe, openAI. How agentic payments should be handled, which standards are emerging, etc. B2C centric. OpenAI showed how in 1 month their agent browser's action speed doubled. 
+- No solution apart from KYA-OS was shown around credential handling, disclosure that it's an AI agent (agents are indistinguishable from regular user session by default - Merchants can verify it's a chatgpt session using the user agent header, however Claude is not playing ball)
+- shopify demo'd WebMCP, however apart from KYA-OS there was no demo of an agent presenting user credentials and proof of delegated authz
+- Huawei has a framework AP4? (similar ish to KYA-oS) integrated into Wechat, however no demo. 
+- A lot of people were calling for auditability from third parties 
+- Clear recognition of the gap that KYA-OS addresses, particuarly around need for outside auditability, need to avoid vendor lock-in. Bosch etc are advocating for an open standard around this. 
+- Dylan showed the WG the demo he gave at the event (purchasing risotto using claude interacting with the merchant via KYA-OS)
+- Juan: Potential to use KYA-OS with on-chain balances - speak to Wilmer from the group if exploring? 
+- Alan: is looking for a home for his B2B negotiation protocol 
+    - links:
+        - https://shiftleft.com/mirrors/www.hpl.hp.com/techreports/2003/HPL-2003-152.html
+        - https://shiftleft.com/mirrors/www.hpl.hp.com/techreports/2003/HPL-2003-153.html
+        - https://shiftleft.com/mirrors/www.hpl.hp.com/techreports/2004/HPL-2004-77.html
+- Rosalyn: we want to ensure KYA-OS continues to evolve; I want to figure out how to bring a little more structure to our conversations. In addition to the spec, we're working on additional use cases, also need to keep up with what else is happening in this space, make it easy for people to implement and adopt KYA-OS. Has 4 workstreams in mind: Spec, Ref Implementation, Industry Intel, Docs
+- Rosalyn and Dylan will work on producing a timeline for these and other activities, to share next week 
+
+## 25 August
+#### kya-os-schema: 
+- Repo is DIF hosted at: https://github.com/decentralized-identity/kya-os-schema
+- Creates sha of conformance vectors e.g, sha256:81d537d4574d3f66d651a03ca41c0b18493b67ea6f3e61aba47d1bda4f3cf49b and PR template has been created for community: [conformance submissions](https://github.com/kya-os/kya-os-usergroup/new/main/registry/builders?filename=your-project.json&value=%7B%0A%20%20%22name%22%3A%20%22Your%20Project%22%2C%0A%20%20%22slug%22%3A%20%22your-project%22%2C%0A%20%20%22description%22%3A%20%22One%20or%20two%20sentences%20on%20what%20you%20ship%20on%20KYA-OS.%22%2C%0A%20%20%22homepage%22%3A%20%22https%3A%2F%2Fexample.com%22%2C%0A%20%20%22repo%22%3A%20%22https%3A%2F%2Fgithub.com%2Fyour-org%2Fyour-project%22%2C%0A%20%20%22kind%22%3A%20%22implementation%22%2C%0A%20%20%22buildsOn%22%3A%20%5B%0A%20%20%20%20%22kya-os-mcp%22%0A%20%20%5D%2C%0A%20%20%22contact%22%3A%20%7B%0A%20%20%20%20%22github%22%3A%20%22your-github-username%22%0A%20%20%7D%2C%0A%20%20%22listedAt%22%3A%20%22YYYY-MM-DD%22%0A%7D%0A)
+#### kya-os-usergroup
+- Community repo for reference implementations and adds a public 'builders' table to showcase services. 
+- Builders are able to test their KYA-OS conformance off of test vectors to verify if they are conformant or not and receive a badge they can display on their repo's to show verified conformance.
+- Site is hosted via Cloudflare Worker at the [builders.kya-os.org domain](https://builders.kya-os.org).
+
+#### DID:WEBVH
+- Juan Caveat: "Late publishing attack" - DID:WEBVH has a loose framework for implementing / mitigation. There is no normative solution, did:webvh could have a rotation event e.g, "jan 1st I rotate my keys" 
+- Cool thing about did:webvh you can get the entire history of the method. Adds possibility to download entire thing to check version time rather than web/pre-request. 
+- Machine readable 'show your notes' type of feature shown as registry implementation. 
+- Create `didWebVHResolver` (similar to `did-web-resolver.ts` in kya-os-mcp). Leverage audit adapter for `trustedObservers[]` to reference witnesses for did:webvh.
+- We can't force a controller to publish. Witnessing gives us detect + refuse-to-honor but not prevention. "To make sure your document in your hand isn't one behind, use a witness" (trusted observer).
+- Dylan: Need to write separation of duties, when witness is introduced we should clarify the trade between 'trust the controller' to 'trust the witness'
+- Outline trust model changes when did:webvh vs did:web.
+    - Juan: Without a witness a did:webvh is basically a public key you got from 'some guy'.
+
+## 18 August
+
+Agenda
+- Review proposed list of topics for v1.0.1 (Dylan has been collecting feedback from a handful of sources and will briefly review and prioritize each)
+Discussion
+- Rosalyn: goal today is to align on which items to address in the roadmap
+- Dylan and Rosalyn are meeting with SC tomorrow to understand what requires approval (likely to be breaking changes)
+- Ankur and Manu have provided feedback on what they would like to see addressed in KYA-OS 
+- Top requested items:  Status List to bitstring, did:webvh (highest priority); none of these should probably need approval 
+- Juan: some specs have received more SC scrutiny than others, due to e.g. cadence of changes / publication schedules; if we want to seek SC approval for KYA-OS v1.1 we can but that may not be needed. Treat minor changes as updates to editors draft in that case. 
+- Juan suggested to create an issue in the repo to keep track of the roadmap, owned by Dylan, which is a URL to a changing document (features roadmap / future changes log in Github)
+- Releases of the software / versions of the spec don't need to be in lockstep. E.g. the spec can be at 1.1 while the reference implementation is still 1.0. 
+- Dylan: makes sense, good to know. Otherwise it would slow things down a lot. 
+- Juan: might be good to concentrate on the versioning of the reference implementation and align the versions of the spec to major announcements
+- Being able to point people to the features roadmap is potentially more important than publishing version releases 
+- Rosalyn: agrees, the priority is to align the roadmap to what the market is asking for 
+- Juan: Issues are not IPR sensitive, PRs are. Juan has been lobbying to treat authorisation / delegation languages e.g. ZCAPs as a pluggable thing - got some pushback from Manu on that 
+- Dylan: probably makes sense for us to take a first stab at the roadmap before soliciting the TF's thoughts; items to address off the back include Lars' feedback / resulting small fixes (enable them to rebuild their verifier against the spec and test)  
+- Juan: protocol specs are less tidy than software specs, re what constitutes a feature. Think of spec versions as mental models rather than hard and fast boundaries
+- Plan for tommorrow: Dylan to put together a list of items (e.g. features in the reference implementation that may be rolled into the spec) for SC to review / ratify
+- Juan: Re the User Group, anyone can open PRs (don't need to be a DIF member), Dylan to merge
+- Re the builder registry, should be fine to merge changes outside of meeting time and only raise questions during the TF meeting
+- The more eyeballs you can get on the roadmap, the more you'll get people raising their hand to open PRs
+- Dylan: did:trail is a W3C tracked did method for AI agents. Reciprocal binding of mutual proof (principal + agent; 2 signatures vs just 1)
+- Juan: the track to W3C approval for did methods will probably be chaired by me; the track does not yet exist. did:trail uses bitstring status list, which is neat. May well be worth implementing a driver in KYA-OS. We could invite the author of did:trail to present to the WG (e.g. with a view to contributing a driver), though he is based in Japan so may be difficult for him to join 
+- EU AI act requires the operator of a service to know which human is the "beneficial owner" / responsible natural or legal person for an AI (hard to do without decentralized ID); KYA-OS will need a lot of drivers / modularity if people bring their own trust chains that terminate in UBOs 
+- Dylan: agree, there's no way to do this without DID
+- Juan: NIST guidance relates to large scale systems, which may not need DID to have UBO tracking (credit cards will play this role), wheras more complicated identifier schemes will need levels of assurance / auditability 
+- Dylan: how can we do a verifiable presentation to reveal e.g. UBO ; may be needed if there's an insurance component or it's a regulated industry e.g. healthcare
+- Juan: Being able to audit at UBO level will probably be part of the premium version(s) of KYA-OS
+- Dylan: agree, getting a verified assurance level facilitates compliance, is a commercially valuable feature
+- Juan: knowing the UBOs of a shell company is something that needs to be done at scale in real time, mostly done via oracles / APIs; extending this to KYA-OS there will probably need to be a similar approach (ARIA also has responsible person binding in their protocol; this might be a v2 thing for KYA-OS, experimenting with multiple routes in the meantime)
+Summary - Actions 
+
+
+- Action Items
+    - [ ] - Dylan - prep for SC meeting 
+    - [ ] - Dylan - chat with did:trail guy
+        - [ ] give him bf's calendly! https://calendly.com/difsupport
+    - [ ] Dylan - after SC, start feature backlog/roadmap
+        - bf: suggested buckets:
+            1. pluggable DID methods
+            2. multiple permission/delegation DSLs?
+            3. UBO/responsible-party tracking
+            4. MCP-specific (or A2A/AP2/etc specific?) features
+            5. Onchain/UCP stuff?
+            6. miscellaneous
+        - specs.md/skills.md? how make builder registry discoverable to agents and crawlers?
+        - roadmap/backlog drift is bad; centralize to one place (glossary in each repo pointing to same place for such things)
+    - some day - Izuru and did:trail guy both interesting re: UBO... keep thinking about this! (bf: also the did:aria guys!) 
 
 ## 11 August
 
