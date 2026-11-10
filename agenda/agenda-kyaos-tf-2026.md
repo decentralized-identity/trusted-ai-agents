@@ -7,6 +7,51 @@
 - statusList2021 - does it need to be public/global? should the spec encourage non-public URL usage of statusList2021, or authN'd/internal-only/RS-side revocation anyways, à la UCAN/ZCap?
     + is this a quick PR or a directional thing? do we need more donations/a pluggable revocation mechanism?
 
+## 11 Nov
+
+- Builder Registry
+    - [Bankee.ai](https://www.bankee.ai/blog/protocol-layer/kya-os)
+    - Some portion of bandwidth of VouchedID DevRel (hiring ongoing) can take lead on coordinating meetups and discord and all that top of funnel 
+- Dylan: A list from IIW of prior art worth looking at: 
+    - CyberStrategyInstitute, NEXUS v0.4: ships a Portable Delegation Bridge adapter for KYA-OS identity and delegated-authority evidence. 
+    - AINumbers, OpenChainGraph: ships KYA-OS credential-chain attestation checker tools.
+    - IDCanopy: their KYARA receipt layer is built on top of KYA-OS as the identity and delegation standard underneath payment protocols.
+    - AgentLair: drafted a proposed Level 4 behavioral trust extension on top of MCP-I's L1 to L3. An extension proposal, not an implementation, but it means a third party is building upward from the ladder.
+    - OWASP AISVS C09-05 catalogues KYA-OS for requirements 9.5.2 and 9.5.5
+    - W3C Agentic Web WG charter draft names DIF TAAWG and KYA-OS in its coordination section
+    - Keio University academic survey (arXiv:2604.23280) evaluates MCP-I/KYA-OS in its standards comparison
+- Dylan: Other IIW takeaways
+    - KERI people everywhere!
+        - Sidebar: did:webs and the "bridge between KERI and DIDs/VCs"
+- What KYA-OS already has
+    - CIMD pretty done, but needs to be written up better
+    - A2A part of LF?
+    - NANDA AgentCards
+    - Policy adapter (generic)
+- What KYA-OS needs to prove greater interop
+    - more detailed AuthZEN policy adapter and specifically the new 4Sept COAZ draft
+        - COAZ has a "yes and" or "no but" syntax for HITL/stepup policies (could be enforced with delegated authority as an onramp)
+        - Dylan's change reqs for COAZ extensions: 
+            - 1 "no schema for chain-authZ envelope"; 
+            - 2 principal always human and agent always agent
+            - Dylan has a contact there; possible work item? (BF: Dmytro might be interested here)
+    - WIMSE/SPIFFE adapter (contact Curity?); check against 
+        - ID-JAG isn't multihop by design (it's token exchange)
+        - prior art tends to lose provenance along the hops (confused deputy arises from that isolation)
+        - did-binding spec wen
+- Dylan: Agentic Web Framework at W3C: TAAWG already a coordination point, but need 
+    - ANP, etc - 
+    - Spiffe and Spire in CNCF
+- Press/namechecks [chart](https://imgur.com/iIwD4gh)
+    - ![](https://imgur.com/iIwD4gh)
+- TPAC Contacts
+    - iShare (NL-based, GLEIF-adjacent) - might
+- Rosalyn: Michael Casey, Tricia, AAIS down to coord
+    - Big in AAIS: [aqua protocol](https://aqua-protocol.org/)
+    - meeting forthcoming
+- Action Items
+    - [ ] Grace - Get Daniela B on the horn about a KYA-OS specific meeting
+
 ## 20 Oct
 
 - Grace: KC event went well. Demo landed, one of the participants is speaking to Juan potentially about membership, works with big Enterprises in Germany & wants something that's implementable on-prem / not tied to any vendor's solution 
