@@ -7,6 +7,59 @@
 - statusList2021 - does it need to be public/global? should the spec encourage non-public URL usage of statusList2021, or authN'd/internal-only/RS-side revocation anyways, à la UCAN/ZCap?
     + is this a quick PR or a directional thing? do we need more donations/a pluggable revocation mechanism?
 
+## 24 Nov
+
+- Updates from other workstreams
+    - devrel/builder's registry?
+    - issue/PR triage
+- A2A topics
+    - [Fraser's diagram on Slack](https://difdn.slack.com/archives/C0AK05AKHGV/p1794914655418989?thread_ts=1794858424.477819&cid=C0AK05AKHGV) - generalizable? useful as part of the commerce extension to KYA-OS?
+
+## 17 Nov
+
+- Agenda
+    + KYA-OS v1.X versus v2.0 versus v2.0-RC
+        * Dylan: key changes:
+            * VCWG 1.1-->2.0 is major
+            * didweb-->webvh changes a lot (in spec, not just impl logic)
+            * proof shape changes not backwards compat
+            * upcoming [deprecations](https://github.com/decentralized-identity/kya-os-mcp/blob/main/DEPRECATIONS.md)
+                * Sidebar: Alan: Max depth seems liike a good idea and it's always an antipattern in my exp, since SPKI ('96)
+            * BF: recommendation: -RC or ref impl versioning only until cogoverned
+        * Dylan: Upcoming changes
+            * better spiffe/wimse support
+            * PDP/PEP policy-lang adapters (AuthZen) - not breaking but "major" in product sense
+        * SemVer - Some changes so far are not fully backwards-compat; at least semantically, it's debatably v2 already 
+        * BF: 
+    + ratification from Steering Committee?
+- Backlog items worth trying to get to before vNext
+    - SPIFFE, WIMSE, etc - what kinds of attestations can be added to agent card, which should be VC-ified
+        - SPIRE has an SVID (platform-attested) per agent
+        - SPIFFE id --> DID Mapping: who asserts? what's the root of trust and LoA?
+            - Alan: SPIFFE(platform).WIMSE(org).AGENT
+            - Dylan: ephemeral workload or subagent: agent id, which is child of wimse org, which is attested to by SPIFFE authority?
+            - Sachio: DID per agent, VCs per DID? SPIFFE/SPIRE platform has service accounts; map each agent to svc account, each svc account to org;
+            - Alan: Do you need DIDs for those per-agent identifiers? Sachio: Yes, if they're cross-org they're useful, this way they're traceable if the VCs/logs get exported or shared with auditors, other cos, etc.
+            - Dylan: cross-org resolution is the requirement here; if there is only a local key, we can at least publish the key FOR them, for other orgs to be able to resolve, or otherwise indirect existing IDs and keys
+            - Sachio: root of trust is hardware keys of platform/cloud provider, imho: AWS/Azure/keycloak root acct; service accounts OF that root chain down to individual agents and subagents (w/additional links like k8s tenant, cluster, etc in the chain), with or without pre-existing agent cards; as long as every agent has that chain, the accountability everyone needs is in the logs
+            - BF: So just defining a default way of encoding it in or linking to it from agent cards and event receipts? Dylan: Where does the binding live, when is it checked and how is that check logged are the open questions for the spec and ref impl IMHO
+            - Alan: But this is more governance than permissioning, no? Sachio: Exactly, it's outside of KYA-OS, but it's good to have per-caller when you need to deeply audit
+                - Alan: Is this a Governance Considerations thing? Dylan: Yes, but maybe a schema for the receipt/VC of it, even though it's essentially a governance thing and varies per-verifier config
+                - Sachio: As long as there's an interface defined for how you get and when you log this info, that's enough for me
+            - Dylan: Another question for me is how long-lived these receipts and chains are: do they still verify months later? 
+                - [ ] open question
+            - Dylan: Another question: maybe the ref impl should have a second impl in another language? there's a py verifier for now but not a compl impl (which could maybe be broken out to a distinct repo)
+            - Judith: I'm still trying to understand the usecase for combining platform-side authorizations and mcp-side receipts and application-level permissions...
+                - Dylan: SVIP carries no mandate, tho; to holistically log, we have to know which cluster/mandate/etc it's part of, on whose behalf, and what authorization not to let it escalate; Judith: ah yes, for that you definitely need the SPIFFE attestations and traceability
+                - BF: Could help debug across caller/called boundary; Dylan: in borderline cases or where trust is low, called server can confirm with platform or req more info (thus Sachio's interface request!)
+                - Alan: Platforms would love to be able to spin down all processes for a given mandate when they get signals from a called server that something might be wrong, or that the mandate has been accomplished and all garbage can be collected (incl permissions, processes, compute, etc-- this is a killer app for making revocation operationalizable)
+                - Dylan: Enterprise platforms already have this kind of hypervisory stuff (via SPIFFE) on the platform side
+            - Sachio: instances need to be logged both individually and in aggregate 
+        - Sachio: MCP, SPIFFE + KYA-OS - is there a tutorial or smple implementation that does all three? Dylan: Actually, inspecting KYA-OS events from inside the MCP inspector is painful, so it's probably a good idea
+- Parting thoughts
+    - Alan: Revocation comes in mid-execution? Lamport-concurrency seems dangerous, I'm against it here; Dylan: I don't think we have anything like that, how would you even... execution is pretty atomic for all our usecases...
+- A2A ?
+
 ## 11 Nov
 
 - Builder Registry
@@ -28,7 +81,7 @@
     - A2A part of LF?
     - NANDA AgentCards
     - Policy adapter (generic)
-- What KYA-OS needs to prove greater interop
+- What KYA-OS needs extended to prove greater interop
     - more detailed AuthZEN policy adapter and specifically the new 4Sept COAZ draft
         - COAZ has a "yes and" or "no but" syntax for HITL/stepup policies (could be enforced with delegated authority as an onramp)
         - Dylan's change reqs for COAZ extensions: 
@@ -41,16 +94,16 @@
         - did-binding spec wen
 - Dylan: Agentic Web Framework at W3C: TAAWG already a coordination point, but need 
     - ANP, etc - 
-    - Spiffe and Spire in CNCF
+    - Spiffe and Spire in CNCF (LF)
 - Press/namechecks [chart](https://imgur.com/iIwD4gh)
     - ![](https://imgur.com/iIwD4gh)
 - TPAC Contacts
-    - iShare (NL-based, GLEIF-adjacent) - might
+    - iShare (NL-based, GLEIF-adjacent) - might be interested in KYA-OS going forward, BF has already met with them
 - Rosalyn: Michael Casey, Tricia, AAIS down to coord
     - Big in AAIS: [aqua protocol](https://aqua-protocol.org/)
     - meeting forthcoming
 - Action Items
-    - [ ] Grace - Get Daniela B on the horn about a KYA-OS specific meeting
+    - [X] Grace - Get Daniela B on the horn about a KYA-OS specific meeting
 
 ## 20 Oct
 
